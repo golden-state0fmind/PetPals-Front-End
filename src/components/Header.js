@@ -5,19 +5,22 @@ const Header = (props) => {
   return (
     <header>
       <div className="logo">
-        <Link to={'/'}>Games!</Link>
+        <Link to={'/'}>Pet Pals Home</Link>
       </div>
       <div className="links">
         <ul>
-          <li><Link to={'/games'}>All Games</Link></li>
-          <li><Link to={'/games/new'}>Add New Game</Link></li>
+
           {props.currentUser ?
             <>
               <li><Link to={'/profile'}>Profile</Link></li>
+              {/* these links need to built out */}
+              <li><Link to={'/allpets'}>All Pets</Link></li>
+              <li><Link to={'/accountinfo'}>Account info</Link></li>
               <li><a href="/logout" onClick={props.logout}>Log Out</a></li>
             </>
             :
             <>
+              <li><Link to={'/'}>Take a tour</Link></li>
               <li><Link to={'/register'}>Register</Link></li>
               <li><Link to={'/login'}>Login</Link></li>
             </>
