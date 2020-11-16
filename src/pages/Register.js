@@ -3,7 +3,9 @@ import UserModel from '../models/user'
 
 class Register extends Component {
     state = {
-        name: '',
+        firstName: '',
+        lastName: '',
+        birthdate: '',
         email: '',
         password: '',
         password2: ''
@@ -35,13 +37,33 @@ class Register extends Component {
                 <h4>Register</h4>
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
-                        <label htmlFor="name">Name</label>
+                        <label htmlFor="firstName">First Name</label>
                         <input
                             onChange={this.handleChange}
                             type="text"
-                            id="name"
-                            name="name"
-                            value={this.state.name}
+                            id="firstName"
+                            name="firstName"
+                            value={this.state.firstName}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="lastName">Last Name</label>
+                        <input
+                            onChange={this.handleChange}
+                            type="text"
+                            id="lastName"
+                            name="lastName"
+                            value={this.state.lastName}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="birthdate">Birthdate</label>
+                        <input
+                            onChange={this.handleChange}
+                            type="text"
+                            id="birthdate"
+                            name="birthdate"
+                            value={this.state.birthdate}
                         />
                     </div>
                     <div className="form-group">
