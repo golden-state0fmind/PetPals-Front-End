@@ -1,6 +1,6 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
-
+//Pages
 import Home from '../pages/Home'
 import Register from '../pages/Register'
 import Login from '../pages/Login'
@@ -16,9 +16,7 @@ import EditComment from '../pages/EditComment'
 import CreatePost from '../pages/CreatePost'
 import EditPost from '../pages/EditPost'
 import ShowPost from '../pages/ShowPost'
-
-
-
+//exporting routes
 export default (props) => (
   <Switch>
     <Route exact path='/' component={Home} />
