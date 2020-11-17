@@ -17,11 +17,20 @@ import CreatePost from '../pages/CreatePost'
 import EditPost from '../pages/EditPost'
 import ShowPost from '../pages/ShowPost'
 //exporting routes
+
+const PrivateRoute = ({ component: Component, ...rest }) => {
+  const currentUser = localStorage.getItem('id')
+  return  <Route { ...rest } render={ props => {
+            return currentUser ? <Component { ...rest } { ...props } /> : <Redirect to="/login" />
+          }} 
+  />
+}
+
 export default (props) => (
   <Switch>
     <Route exact path='/' component={Home} />
     <Route path='/register' component={Register} />
-    <Route path='/profile' component={Profile} />
+    <PrivateRoute path='/profile' component={ Profile } currentUser={ props.currentUser } />
     <Route path='/accountinfo' component={AccountInfo} />
     <Route path='/allpets' component={AllPets} />
     <Route path='/addpet' component={AddPet} />
