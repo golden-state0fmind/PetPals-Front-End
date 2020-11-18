@@ -1,13 +1,16 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react'
+import ImageModel from '../models/images'
 import ImageContainer from '../components/ImageContainer'
-import ImageModel from '../models/images';
+import PostBar from '../components/PostBar'
+import '../css/home.css'
 
 const Home = () => {
   const [images,setImages] = useState([])
 
   const fetchData=() => {
     ImageModel.all().then(data=>{
-      console.log(data)
+    
+      setImages(data.images)
     })
   }
 
@@ -16,7 +19,8 @@ const Home = () => {
   return (
     <div>
       <h1>Welcome all Pet Owners</h1>
-      <ImageContainer />
+      <ImageContainer images={images} class="home-preview-img"/>
+      <PostBar />
     </div>
   );
 }
