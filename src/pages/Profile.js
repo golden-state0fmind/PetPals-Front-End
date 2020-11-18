@@ -5,8 +5,8 @@ const Profile = () => {
     // One ImageContainer for pets and one for all photots
     return (
         <div>
-        <ImageContainer /> 
-        <ImageContainer />
+        <ImageContainer class="profile-preview-img"/> 
+        <ImageContainer class="profile-preview-img"/>
         <h1>Profile</h1>
         </div>
     )
