@@ -33,7 +33,7 @@ const Home = () => {
   return (
     <div>
       <h1>Welcome all Pet Owners</h1>
-      <ImageContainer images={images} class="home-preview-img"/>
+      <ImageContainer images={images} imgClass="home-preview-img" divClass="home-preview-container"/>
       <PostBar />
       {posts.length ?  <PostContainer posts={posts}/> : "Loading!"}
     
