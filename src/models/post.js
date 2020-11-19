@@ -5,6 +5,17 @@ class PostModel {
     return fetch(`${url}/posts`).then(res => res.json())
   }
 
+//find one use and get all their posts
+  static oneUser = (userId) => {
+    return fetch(`${url}/posts/profile/${userId}`)
+      .then(res => res.json())
+  }
+  
+
+  static onePost = () => {
+//get one post from one user
+  }
+
   static create = (postData) => {
     return fetch(`${url}/posts`, {
       method: "POST",
