@@ -5,7 +5,6 @@ const PostBar = () => {
     return (
         <div>
             <button> <Link to={'/createpost'}>Create a post</Link> </button>
-          
         </div>
     );
 }
