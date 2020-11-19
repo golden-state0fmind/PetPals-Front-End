@@ -6,11 +6,11 @@ import PostContainer from '../components/PostContainer'
 import '../css/home.css'
 import PostModel from '../models/post'
 
-const Home = () => {
+const Home = (props) => {
   const [images,setImages] = useState([])
   const [posts, setPosts] = useState([])
   
-  
+  console.log(props)
   const fetchImages=() => {
     ImageModel.all().then((imgData)=>{
       
