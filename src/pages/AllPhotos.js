@@ -14,25 +14,16 @@ const AllPhotos = (props) => {
     })
   }
 
-  console.log(images)
-
-
   const handleProfilePic = (e, userId, imgUrl) => {
     e.preventDefault()
-    ImageModel.update({
+    ImageModel.updateProfilePic({
       imgUrl: imgUrl
     }, userId).then(data => {
       props.history.push('/')
     })
 }
 
-
-
-
-
-
-
-
+//////////////////////////////
 
 
 const handleDelete = (e, id) => {
@@ -49,7 +40,6 @@ const allImages = images.map((image, index) => (
   {image.userId == currentUserId ?
     <>
       <img src={image.imageUrl} alt="User personal images" className='all-image' id={image.id} />
-      <br/>This image belongs to: {image.userId}
       <form onSubmit={(e) => handleProfilePic(e, currentUserId, image.imageUrl)}> <button>Make Profile pic</button></form>
 
       <form onSubmit={(e) => handleDelete(e, image.id)}>

@@ -5,13 +5,13 @@ const EditPost = (props) => {
     const [postId, setPostId] = useState(props.match.params.id)
     const [content, setContent] = useState('')
     const [imgUrl, setImgUrl] = useState('')
-    const [userId, setUser] = useState(localStorage.getItem('id'))
+    const [userId, setUserId] = useState(localStorage.getItem('id'))
 
     const fetchPost = () => {
         PostModel.onePost(postId).then((postData) => {
             setContent(postData.post.content)
             setImgUrl(postData.post.imgUrl)
-            setUser(postData.post.userId)
+            setUserId(postData.post.userId)
         })
     }
 

@@ -40,7 +40,6 @@ class PostModel {
   }
 
   static delete = (postId) => {
-    console.log("WE BE DELETING!!", postId)
     return fetch(`${url}/posts/${postId}`, {method: "DELETE"})
     .then(res => res.json())
   }
