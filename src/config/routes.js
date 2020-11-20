@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 //Pages
@@ -36,39 +37,6 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 
 export default (props) => (
   <Switch>
-<<<<<<< HEAD
-    <Route exact path="/" component={Home} />
-    <Route path="/register" component={Register} />
-    <PrivateRoute
-      path="/profile"
-      component={Profile}
-      currentUser={props.currentUser}
-    />
-    <Route path="/accountinfo" component={AccountInfo} />
-    <Route path="/allpets" component={AllPets} />
-    <Route path="/addpet" component={AddPet} />
-    <Route path="/editpet" component={EditPet} />
-    <Route path="/allphotos" component={AllPhotos} />
-    <Route path="/uploadphotos" component={UploadPhotos} />
-    <Route path="/addcomment" component={AddComment} />
-    <Route path="/editcomment" component={EditComment} />
-    <Route path="/createpost" component={CreatePost} />
-    <Route path="/editpost" component={EditPost} />
-    <Route path="/showpost" component={ShowPost} />
-    <Route
-      path="/login"
-      render={(routeComponentProps) => {
-        return (
-          <Login
-            {...routeComponentProps}
-            //more props to come here
-            currentUser={props.currentUser}
-            storeUser={props.storeUser}
-          />
-        );
-      }}
-    />
-=======
     <Route exact path='/' component={Home} />
     <Route path='/register' component={Register} />
     <PrivateRoute path='/profile' component={ Profile } currentUser={ props.currentUser } />
@@ -91,6 +59,5 @@ export default (props) => (
         storeUser={props.storeUser}
       />
     }} />
->>>>>>> submain
   </Switch>
 );
