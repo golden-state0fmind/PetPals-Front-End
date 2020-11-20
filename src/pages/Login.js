@@ -20,6 +20,7 @@ class Login extends Component {
                     return false
                 }
                 //strored user is defined in the app component and passed to login
+                console.log(data)
                 this.props.storeUser(data.user)
                 //redirect the user to their profile
                 this.props.history.push('/profile')

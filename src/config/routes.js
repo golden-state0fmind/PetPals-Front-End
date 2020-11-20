@@ -36,6 +36,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 
 export default (props) => (
   <Switch>
+<<<<<<< HEAD
     <Route exact path="/" component={Home} />
     <Route path="/register" component={Register} />
     <PrivateRoute
@@ -67,5 +68,29 @@ export default (props) => (
         );
       }}
     />
+=======
+    <Route exact path='/' component={Home} />
+    <Route path='/register' component={Register} />
+    <PrivateRoute path='/profile' component={ Profile } currentUser={ props.currentUser } />
+    <Route path='/accountinfo' component={AccountInfo} />
+    <Route path='/allpets' component={AllPets} />
+    <Route path='/addpet' component={AddPet} />
+    <Route path='/editpet' component={EditPet} />
+    <Route path='/allphotos' component={AllPhotos} />
+    <Route path='/uploadphotos' component={UploadPhotos} />
+    <Route path='/addcomment/:id' component={AddComment} />
+    <Route path='/editcomment' component={EditComment} />
+    <Route path='/createpost' component={CreatePost}  />
+    <Route path='/post/:id/edit' component={EditPost}/>
+    <Route path='/post/:id/show' component={ShowPost} />
+    <Route path='/login' render={(routeComponentProps) => {
+      return <Login
+        {...routeComponentProps}
+        //more props to come here
+        currentUser={props.currentUser}
+        storeUser={props.storeUser}
+      />
+    }} />
+>>>>>>> submain
   </Switch>
 );

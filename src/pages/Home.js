@@ -10,7 +10,6 @@ const Home = (props) => {
   const [images,setImages] = useState([])
   const [posts, setPosts] = useState([])
   
-  console.log(props)
   const fetchImages=() => {
     ImageModel.all().then((imgData)=>{
       
@@ -24,10 +23,9 @@ const Home = (props) => {
     })
   }
 
-  useEffect( () => { fetchImages() },[])
 
+  useEffect( () => { fetchImages() },[])
   useEffect( () => { fetchPosts() } ,[])
-  // console.log('this is post state', posts)
 
 
   return (
