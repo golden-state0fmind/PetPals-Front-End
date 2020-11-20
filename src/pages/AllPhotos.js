@@ -5,7 +5,6 @@ import '../css/allphotos.css'
 
 const AllPhotos = () => {
   const [images, setImages] = useState([])
-  const [imgId, setImgId] = useState()
 
   const fetchImages = () => {
     ImageModel.all().then((imgData) => {
@@ -18,9 +17,9 @@ const AllPhotos = () => {
     // e.preventDefault()
   }
 
-  const handleDelete = (e) => {
+  const handleDelete = (e, id) => {
     e.preventDefault()
-    console.log("ARE WE MAKING IT HERE?!", e.target)
+    console.log("ARE WE MAKING IT HERE?!", id)
     // PostModel.delete(postId).then(data => {
     //   props.history.push('/')
     // })
@@ -28,14 +27,12 @@ const AllPhotos = () => {
 
   useEffect(() => { fetchImages() }, [])
 
-  console.log("THIS IS THE IMG ID STATE:", imgId)
-
   const allImages = images.map((image, index) => (
     <div>
       <img src={image.imageUrl} alt="User personal images" key={index} className='all-image' id={image.id} />
       <form onSubmit={handleProfilePic}> <button>Make Profile pic</button></form>
 
-      <form onSubmit={handleDelete}>
+      <form onSubmit={(e)=> handleDelete(e, image.id)}>
         <input type="hidden" name='imgId' value={image.id} />
         <button type="submit">Delete</button></form>
     </div>
