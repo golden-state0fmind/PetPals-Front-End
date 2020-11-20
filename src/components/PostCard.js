@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 
 const PostCard = (props) => {
-    console.log ("this is props", props.posts)
     const userId = localStorage.getItem('id')
     const posts = props.posts.map((post, index) => (
         <div key={index}>
