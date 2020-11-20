@@ -1,12 +1,16 @@
 import React, {useState, useEffect} from 'react'
+import {Link} from 'react-router-dom'
 import ImageContainer from '../components/ImageContainer'
 import PostBar from '../components/PostBar'
 import PostContainer from '../components/PostContainer'
+import ImageModel from '../models/images'
 import PostModel from '../models/post'
+import '../css/profile.css'
 
 const Profile = () => {
     const [user, setUser] = useState(localStorage.getItem('id'))
     const [posts, setPosts] = useState([])
+    const [images, setImages] = useState([])
 
     const fetchUsersPosts = () => {
         PostModel.oneUser(user).then((postData) => {
@@ -14,14 +18,22 @@ const Profile = () => {
         })
     }
 
+    const fetchImages=() => {
+        ImageModel.all().then((imgData)=>{
+          
+          setImages(imgData.images)
+        })
+      }
     useEffect( () => { fetchUsersPosts() } ,[])
+    useEffect(()=>{fetchImages()},[])
 
     return (
         <div>
             <h1>Profile</h1>
+            <ImageContainer imgClass="profile-preview-img" divClass='profile-preview-container' images={images}/>
+            <button> <Link to="/allphotos">See All</Link> </button>
+            {/* <ImageContainer imgClass="profile-preview-img" divClass='profile-preview-container' /> */}
             <PostBar />
-            {/* <ImageContainer class="profile-preview-img" />
-            <ImageContainer class="profile-preview-img" /> */}
             {posts.length ?  <PostContainer posts={posts}/> : "Loading!"}
         </div>
     )
