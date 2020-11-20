@@ -29,7 +29,6 @@ const EditPost = (props) => {
 
     //need a function for the delete button 
     const handleDelete = (e) => {
-        console.log("ARE WE MAKING IT HERE?!")
         e.preventDefault()
         PostModel.delete(postId).then(data => {
             props.history.push('/')
