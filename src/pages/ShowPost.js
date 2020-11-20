@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import PostModel from '../models/post'
+import CommentContainer from '../components/CommentContainer'
+import CommentModel from '../models/comment'
 
 const ShowPost = (props) => {
     const [postUserId, setPostUserId] = useState()
@@ -9,12 +11,12 @@ const ShowPost = (props) => {
     const [content, setContent] = useState()
     const [createdAt, setCreatedAt] = useState()
     const [updatedAt, setUpdatedAt] = useState()
+    const [comments, setComments] = useState([])
 
     const userId = localStorage.getItem('id')
 
     const fetchPost = () => {
         PostModel.onePost(props.match.params.id).then(onePost => {
-            console.log(onePost.post)
             setPostUserId(onePost.post.userId)
             setPostId(onePost.post.id)
             setImgUrl(onePost.post.imgUrl)
@@ -23,9 +25,16 @@ const ShowPost = (props) => {
             setUpdatedAt(onePost.post.updatedAt)
         })
     }
-    // console.log('THIS IS THE SHOWPOST STATE', post.id)
-    useEffect(() => { fetchPost() }, [])
 
+    const fetchComments = () => {
+        CommentModel.all(props.match.params.id).then(comments => {
+            setComments(comments.comments)
+        })
+    }
+    
+    useEffect(() => { fetchPost() }, [])
+    useEffect(() => {fetchComments()}, [])
+    
     return (
         <div>
             <h3><Link to={`/post/${postId}/show`}>USER ID: {postUserId}</Link></h3>
@@ -35,9 +44,10 @@ const ShowPost = (props) => {
             <p>{createdAt}</p>
             <p>{updatedAt}</p>
             <button><Link to={`/addcomment/${postId}`}>Add Comment</Link></button>
-            {postUserId == userId ? 
+            {postUserId == userId ?
 
-            <button><Link to={`/post/${postId}/edit`}>Edit Post</Link></button> : "" }
+                <button><Link to={`/post/${postId}/edit`}>Edit Post</Link></button> : ""}
+            {comments.length ? <CommentContainer postId={postId} comments={comments} /> : "Loading!"}
         </div>
     )
 }

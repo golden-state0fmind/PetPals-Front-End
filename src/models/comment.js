@@ -2,9 +2,9 @@ const url = `http://localhost:4000/api/v1`
 
 class CommentModel {
   //show all for a specific post
-  // static all = () => {
-  //   return fetch(`${url}/games`).then(res => res.json())
-  // }
+  static all = (postId) => {
+    return fetch(`${url}/comments/post/${postId}`).then(res => res.json())
+  }
 
   //show one for edit comment
   // static show = (gameId) => {
