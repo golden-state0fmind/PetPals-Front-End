@@ -5,15 +5,28 @@ class PostModel {
     return fetch(`${url}/posts`).then(res => res.json())
   }
 
-//find one use and get all their posts
+  //find one use and get all their posts
   static oneUser = (userId) => {
     return fetch(`${url}/posts/profile/${userId}`)
       .then(res => res.json())
   }
-  
 
-  static onePost = () => {
-//get one post from one user
+
+  static onePost = (postId) => {
+    //get one post from one user
+    return fetch(`${url}/posts/${postId}`)
+      .then(res => res.json())
+  }
+
+  static update = (postId, postData) => {
+    return fetch(`${url}/posts/${postData}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(postId)
+    })
+      .then(res => res.json())
   }
 
   static create = (postData) => {
