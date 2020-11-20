@@ -1,9 +1,10 @@
 const url = `http://localhost:4000/api/v1`
 
 class PetModel {
-  // static all = () => {
-  //   return fetch(`${url}/pets`).then(res => res.json())
-  // }
+  static all = () => {
+    console.log("HOWBOUTHERE?!?!?!?!?!?")
+    return fetch(`${url}/pets`).then(res => res.json())
+  }
 
   // static show = (gameId) => {
   //   return fetch(`${url}/pets/${gameId}`).then(res => res.json())

@@ -6,7 +6,7 @@ const CreatePost = (props) => {
 
   const [content, setContent] = useState('')
   const [imgUrl, setImgUrl] = useState('')
-  const [userId, setUser] = useState(localStorage.getItem('id'))
+  const [userId] = useState(localStorage.getItem('id'))
 
   const handleSubmit = (e) => {
     e.preventDefault()
