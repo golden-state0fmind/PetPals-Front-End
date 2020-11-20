@@ -47,7 +47,7 @@ export default (props) => (
     <Route path='/allphotos' component={AllPhotos} />
     <Route path='/uploadphotos' component={UploadPhotos} />
     <Route path='/addcomment/:id' component={AddComment} />
-    <Route path='/editcomment' component={EditComment} />
+    <Route path='/comment/:id/edit' component={EditComment} />
     <Route path='/createpost' component={CreatePost}  />
     <Route path='/post/:id/edit' component={EditPost}/>
     <Route path='/post/:id/show' component={ShowPost} />

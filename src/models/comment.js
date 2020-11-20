@@ -6,10 +6,22 @@ class CommentModel {
     return fetch(`${url}/comments/post/${postId}`).then(res => res.json())
   }
 
-  //show one for edit comment
-  // static show = (gameId) => {
-  //   return fetch(`${url}/games/${gameId}`).then(res => res.json())
-  // }
+//  show one for edit commentId
+  static one = (commentId) => {
+    return fetch(`${url}/comments/${commentId}`).then(res => res.json())
+  }
+
+  //Update Comment
+  static update = (commentData, commentId) => {
+    return fetch(`${url}/comments/${commentId}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(commentData)
+    })
+      .then(res => res.json())
+  }
 
 
   static create = (commentData) => {
