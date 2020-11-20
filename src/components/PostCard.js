@@ -11,7 +11,7 @@ const PostCard = (props) => {
             <img src={post.imgUrl} alt="" />
             <p> {post.content} </p>
             <p>{post.createAt}</p>
-            <button><Link to={'/addcomment'}>Add Comment</Link></button>
+            <button><Link to={`/addcomment/${post.id}`}>Add Comment</Link></button>
             {post.userId == userId ? 
 
             <button><Link to={`/post/${post.id}/edit`}>Edit Post</Link></button> : "" }
