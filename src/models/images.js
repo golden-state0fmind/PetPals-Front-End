@@ -6,10 +6,20 @@ class ImageModel {
   }
 
   static updateProfilePic = (imgData, userId) => {
-    //i need a backened route that uses the user id to find that user and update the imgURL with image data
-//i think i need to pass user ID in the URL pattern as a params
     return fetch(`${url}/images/profilepic/${userId}`, {
       method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(imgData)
+    })
+      .then(res => res.json())
+  }
+
+
+  static create = (imgData) => {
+    return fetch(`${url}/images/`, {
+      method: "POST",
       headers: {
         "Content-Type": "application/json"
       },

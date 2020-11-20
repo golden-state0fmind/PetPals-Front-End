@@ -3,6 +3,7 @@ import ImageModel from '../models/images'
 import ImageContainer from '../components/ImageContainer'
 import PostBar from '../components/PostBar'
 import PostContainer from '../components/PostContainer'
+import {Link} from 'react-router-dom'
 import '../css/home.css'
 import PostModel from '../models/post'
 
@@ -32,6 +33,7 @@ const Home = (props) => {
     <div>
       <h1>Welcome all Pet Owners</h1>
       <ImageContainer images={images} imgClass="home-preview-img" divClass="home-preview-container"/>
+      <Link to={'/uploadphotos'}><button>Upload Photos</button></Link>
       <PostBar />
       {posts.length ?  <PostContainer posts={posts}/> : "Loading!"}
     

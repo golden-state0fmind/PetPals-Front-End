@@ -23,9 +23,6 @@ const AllPhotos = (props) => {
     })
 }
 
-//////////////////////////////
-
-
 const handleDelete = (e, id) => {
   e.preventDefault()
   ImageModel.delete(id).then(data => {
@@ -51,6 +48,7 @@ const allImages = images.map((image, index) => (
 
 return (
   <div>
+    <h1>All Photos</h1>
     {allImages}
   </div>
 )

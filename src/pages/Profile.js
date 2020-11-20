@@ -34,6 +34,7 @@ const Profile = () => {
             <button> <Link to="/allphotos">See All</Link> </button>
             <button> <Link to="/allpets">See All Pets</Link> </button>
             <button> <Link to="/addpet">Add A Pet</Link> </button>
+            <Link to={'/uploadphotos'}><button>Upload Photos</button></Link>
             {/* <ImageContainer imgClass="profile-preview-img" divClass='profile-preview-container' /> */}
             <PostBar />
             {posts.length ? <PostContainer posts={posts} /> : "Loading!"}
