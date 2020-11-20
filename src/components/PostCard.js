@@ -10,7 +10,7 @@ const PostCard = (props) => {
             <h3>POST ID: {post.id}</h3>
             <img src={post.imgUrl} alt="" />
             <p> {post.content} </p>
-            <p>{post.createAt}</p>
+            <p>{post.createdAt}</p>
             <button><Link to={`/addcomment/${post.id}`}>Add Comment</Link></button>
             {post.userId == userId ? 
 
