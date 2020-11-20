@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom'
 import ImageModel from '../models/images'
 import '../css/allphotos.css'
 
-const AllPhotos = () => {
+const AllPhotos = (props) => {
   const [images, setImages] = useState([])
+  const [currentUserId, setcurrentUserId] = useState(localStorage.getItem('id'))
+
 
   const fetchImages = () => {
     ImageModel.all().then((imgData) => {
@@ -12,37 +14,56 @@ const AllPhotos = () => {
     })
   }
 
+  console.log(images)
 
-  const handleProfilePic = (e) => {
-    // e.preventDefault()
-  }
 
-  const handleDelete = (e, id) => {
+  const handleProfilePic = (e, userId, imgUrl) => {
     e.preventDefault()
-    console.log("ARE WE MAKING IT HERE?!", id)
-    // PostModel.delete(postId).then(data => {
-    //   props.history.push('/')
-    // })
-  }
+    ImageModel.update({
+      imgUrl: imgUrl
+    }, userId).then(data => {
+      props.history.push('/')
+    })
+}
 
-  useEffect(() => { fetchImages() }, [])
 
-  const allImages = images.map((image, index) => (
-    <div>
-      <img src={image.imageUrl} alt="User personal images" key={index} className='all-image' id={image.id} />
-      <form onSubmit={handleProfilePic}> <button>Make Profile pic</button></form>
 
-      <form onSubmit={(e)=> handleDelete(e, image.id)}>
-        <input type="hidden" name='imgId' value={image.id} />
+
+
+
+
+
+
+
+const handleDelete = (e, id) => {
+  e.preventDefault()
+  ImageModel.delete(id).then(data => {
+    props.history.push('/profile')
+  })
+}
+
+useEffect(() => { fetchImages() }, [])
+
+const allImages = images.map((image, index) => (
+  <div key={index}>
+  {image.userId == currentUserId ?
+    <>
+      <img src={image.imageUrl} alt="User personal images" className='all-image' id={image.id} />
+      <br/>This image belongs to: {image.userId}
+      <form onSubmit={(e) => handleProfilePic(e, currentUserId, image.imageUrl)}> <button>Make Profile pic</button></form>
+
+      <form onSubmit={(e) => handleDelete(e, image.id)}>
         <button type="submit">Delete</button></form>
-    </div>
-  ))
+    </>
+      : ""}
+  </div>
+))
 
-  return (
-    <div>
-      {allImages}
-    </div>
-  )
+return (
+  <div>
+    {allImages}
+  </div>
+)
 }
 
 export default AllPhotos
