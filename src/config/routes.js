@@ -40,7 +40,7 @@ export default (props) => (
     <Route path='/addcomment' component={AddComment} />
     <Route path='/editcomment' component={EditComment} />
     <Route path='/createpost' component={CreatePost}  />
-    <Route path='/editpost' component={EditPost} />
+    <Route path='/post/:id/edit' component={EditPost}/>
     <Route path='/showpost' component={ShowPost} />
     <Route path='/login' render={(routeComponentProps) => {
       return <Login
