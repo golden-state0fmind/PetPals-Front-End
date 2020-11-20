@@ -11,20 +11,19 @@ class PostModel {
       .then(res => res.json())
   }
 
-
   static onePost = (postId) => {
     //get one post from one user
     return fetch(`${url}/posts/${postId}`)
       .then(res => res.json())
   }
 
-  static update = (postId, postData) => {
-    return fetch(`${url}/posts/${postData}`, {
+  static update = (postData, postId) => {
+    return fetch(`${url}/posts/${postId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(postId)
+      body: JSON.stringify(postData)
     })
       .then(res => res.json())
   }
@@ -39,6 +38,15 @@ class PostModel {
     })
       .then(res => res.json())
   }
+
+  static delete = (postId) => {
+    console.log("WE BE DELETING!!", postId)
+    return fetch(`${url}/posts/${postId}`, {method: "DELETE"})
+    .then(res => res.json())
+  }
+
 }
+
+
 
 export default PostModel
