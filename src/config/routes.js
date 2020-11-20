@@ -43,7 +43,7 @@ export default (props) => (
     <Route path='/accountinfo' component={AccountInfo} />
     <Route path='/allpets' component={AllPets} />
     <Route path='/addpet' component={AddPet} />
-    <Route path='/editpet' component={EditPet} />
+    <Route path='/pet/:id/edit' component={EditPet} />
     <Route path='/allphotos' component={AllPhotos} />
     <Route path='/uploadphotos' component={UploadPhotos} />
     <Route path='/addcomment/:id' component={AddComment} />

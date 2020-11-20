@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import {Link} from 'react-router-dom'
 
 const PetCard = (props) => {
   const [userId] = useState(localStorage.getItem('id'))
@@ -12,6 +13,7 @@ const PetCard = (props) => {
             {pet.name}
             {pet.species}
             {pet.birthdate}
+            <button><Link to={`/pet/${pet.id}/edit`}>Edit Pet</Link></button>
           </div>
           : ""}
     </>

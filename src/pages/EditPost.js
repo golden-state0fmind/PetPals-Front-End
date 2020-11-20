@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import PostModel from '../models/post'
 
 const EditPost = (props) => {
-    const [postId, setPostId] = useState(props.match.params.id)
+    const [postId] = useState(props.match.params.id)
     const [content, setContent] = useState('')
     const [imgUrl, setImgUrl] = useState('')
     const [userId, setUserId] = useState(localStorage.getItem('id'))
