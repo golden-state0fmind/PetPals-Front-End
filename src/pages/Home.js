@@ -24,8 +24,8 @@ const Home = (props) => {
     })
   }
 
-  useEffect( () => { fetchImages() },[])
 
+  useEffect( () => { fetchImages() },[])
   useEffect( () => { fetchPosts() } ,[])
   // console.log('this is post state', posts)
 
