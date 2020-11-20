@@ -17,8 +17,6 @@ const CreatePost = (props) => {
     }).then(data => {
       props.history.push('/')
     })
-
-
   }
 
   return (
