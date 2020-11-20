@@ -5,7 +5,9 @@ class ImageModel {
     return fetch(`${url}/images`).then(res => res.json())
   }
 
-
+  static delete = (imgId) => {
+    return fetch (`${url}/images/${imgId}`)
+  }
 }
 
 export default ImageModel

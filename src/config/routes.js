@@ -1,30 +1,39 @@
-import React from 'react'
-import { Switch, Route, Redirect } from 'react-router-dom'
+/* eslint-disable import/no-anonymous-default-export */
+import React from "react";
+import { Switch, Route, Redirect } from "react-router-dom";
 //Pages
-import Home from '../pages/Home'
-import Register from '../pages/Register'
-import Login from '../pages/Login'
-import Profile from '../pages/Profile'
-import AccountInfo from '../pages/AccountInfo'
-import AllPets from '../pages/AllPets'
-import AddPet from '../pages/AddPet'
-import EditPet from '../pages/EditPet'
-import AllPhotos from '../pages/AllPhotos'
-import UploadPhotos from '../pages/UploadPhotos'
-import AddComment from '../pages/AddComment'
-import EditComment from '../pages/EditComment'
-import CreatePost from '../pages/CreatePost'
-import EditPost from '../pages/EditPost'
-import ShowPost from '../pages/ShowPost'
+import Home from "../pages/Home";
+import Register from "../pages/Register";
+import Login from "../pages/Login";
+import Profile from "../pages/Profile";
+import AccountInfo from "../pages/AccountInfo";
+import AllPets from "../pages/AllPets";
+import AddPet from "../pages/AddPet";
+import EditPet from "../pages/EditPet";
+import AllPhotos from "../pages/AllPhotos";
+import UploadPhotos from "../pages/UploadPhotos";
+import AddComment from "../pages/AddComment";
+import EditComment from "../pages/EditComment";
+import CreatePost from "../pages/CreatePost";
+import EditPost from "../pages/EditPost";
+import ShowPost from "../pages/ShowPost";
 //exporting routes
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
-  const currentUser = localStorage.getItem('id')
-  return  <Route { ...rest } render={ props => {
-            return currentUser ? <Component { ...rest } { ...props } /> : <Redirect to="/login" />
-          }} 
-  />
-}
+  const currentUser = localStorage.getItem("id");
+  return (
+    <Route
+      {...rest}
+      render={(props) => {
+        return currentUser ? (
+          <Component {...rest} {...props} />
+        ) : (
+          <Redirect to="/login" />
+        );
+      }}
+    />
+  );
+};
 
 export default (props) => (
   <Switch>
@@ -51,4 +60,4 @@ export default (props) => (
       />
     }} />
   </Switch>
-)
+);
