@@ -1,13 +1,28 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import ImageContainer from '../components/ImageContainer'
+import PostBar from '../components/PostBar'
+import PostContainer from '../components/PostContainer'
+import PostModel from '../models/post'
 
 const Profile = () => {
-    // One ImageContainer for pets and one for all photots
+    const [user, setUser] = useState(localStorage.getItem('id'))
+    const [posts, setPosts] = useState([])
+
+    const fetchUsersPosts = () => {
+        PostModel.oneUser(user).then((postData) => {
+            setPosts(postData.posts)
+        })
+    }
+
+    useEffect( () => { fetchUsersPosts() } ,[])
+
     return (
         <div>
-        <ImageContainer class="profile-preview-img"/> 
-        <ImageContainer class="profile-preview-img"/>
-        <h1>Profile</h1>
+            <h1>Profile</h1>
+            <PostBar />
+            {/* <ImageContainer class="profile-preview-img" />
+            <ImageContainer class="profile-preview-img" /> */}
+            {posts.length ?  <PostContainer posts={posts}/> : "Loading!"}
         </div>
     )
 }

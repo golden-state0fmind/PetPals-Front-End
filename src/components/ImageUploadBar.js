@@ -9,7 +9,7 @@ const ImageUploadBar = (props) => {
         const formData = new FormData()
         formData.append('file', uploadedImage)
         formData.append('upload_preset', 'cloudName')
-        axios.post('https://api.cloudinary.com/v1_1/antonio2020/image/upload', formData)
+        axios.post('https://api.cloudinary.com/v1_1/petpals/image/upload', formData)
             .then((res) => {
                 let imgUrl = [res.data.url]
                 props.setImgUrl(imgUrl[0])
