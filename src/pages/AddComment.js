@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import CommentModel from '../models/comment'
 
 const AddComment = (props) => {
-    const [postId, setPostId] = useState(props.match.params.id)
     const [content, setContent] = useState('')
-    const [userId, setUserId] = useState(localStorage.getItem('id'))
+    const [postId] = useState(props.match.params.id)
+    const [userId] = useState(localStorage.getItem('id'))
 
     const handleSubmit = (e) => {
         e.preventDefault()

@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react'
-import {Link} from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import ImageContainer from '../components/ImageContainer'
 import PostBar from '../components/PostBar'
 import PostContainer from '../components/PostContainer'
@@ -18,23 +18,26 @@ const Profile = () => {
         })
     }
 
-    const fetchImages=() => {
-        ImageModel.all().then((imgData)=>{
-          
-          setImages(imgData.images)
+    const fetchImages = () => {
+        ImageModel.all().then((imgData) => {
+            console.log(imgData.images)
+            setImages(imgData.images)
         })
-      }
-    useEffect( () => { fetchUsersPosts() } ,[])
-    useEffect(()=>{fetchImages()},[])
+    }
+    useEffect(() => { fetchUsersPosts() }, [])
+    useEffect(() => { fetchImages() }, [])
 
     return (
         <div>
             <h1>Profile</h1>
-            <ImageContainer imgClass="profile-preview-img" divClass='profile-preview-container' images={images}/>
+            <ImageContainer imgClass="profile-preview-img" divClass='profile-preview-container' images={images} />
             <button> <Link to="/allphotos">See All</Link> </button>
+            <button> <Link to="/allpets">See All Pets</Link> </button>
+            <button> <Link to="/addpet">Add A Pet</Link> </button>
+            <Link to={'/uploadphotos'}><button>Upload Photos</button></Link>
             {/* <ImageContainer imgClass="profile-preview-img" divClass='profile-preview-container' /> */}
             <PostBar />
-            {posts.length ?  <PostContainer posts={posts}/> : "Loading!"}
+            {posts.length ? <PostContainer posts={posts} /> : "Loading!"}
         </div>
     )
 }

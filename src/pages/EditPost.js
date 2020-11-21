@@ -2,16 +2,16 @@ import React, { useState, useEffect } from 'react'
 import PostModel from '../models/post'
 
 const EditPost = (props) => {
-    const [postId, setPostId] = useState(props.match.params.id)
+    const [postId] = useState(props.match.params.id)
     const [content, setContent] = useState('')
     const [imgUrl, setImgUrl] = useState('')
-    const [userId, setUser] = useState(localStorage.getItem('id'))
+    const [userId, setUserId] = useState(localStorage.getItem('id'))
 
     const fetchPost = () => {
         PostModel.onePost(postId).then((postData) => {
             setContent(postData.post.content)
             setImgUrl(postData.post.imgUrl)
-            setUser(postData.post.userId)
+            setUserId(postData.post.userId)
         })
     }
 
@@ -29,7 +29,6 @@ const EditPost = (props) => {
 
     //need a function for the delete button 
     const handleDelete = (e) => {
-        console.log("ARE WE MAKING IT HERE?!")
         e.preventDefault()
         PostModel.delete(postId).then(data => {
             props.history.push('/')
