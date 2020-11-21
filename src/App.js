@@ -8,9 +8,12 @@ import UserModel from './models/user'
 function App() {
 
   const [currentUser, setCurrentUser] = useState(localStorage.getItem('id'))
-  const storeUser = (userId) => {
-    setCurrentUser({ userId })
-    localStorage.setItem('id', userId)
+  const storeUser = (user) => {
+    console.log(user)
+    setCurrentUser({ user })
+    localStorage.setItem('id', user.id)
+    localStorage.setItem('firstName', user.firstName)
+    localStorage.setItem('lastName', user.lastName)
   }
   const logout = (event) => {
     event.preventDefault()
