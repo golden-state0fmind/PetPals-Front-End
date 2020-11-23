@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import ImageContainer from '../components/ImageContainer'
+import Images from '../components/Images'
 import PostBar from '../components/PostBar'
 import PostContainer from '../components/PostContainer'
 import {Link} from 'react-router-dom'
@@ -34,7 +34,7 @@ const Home = (props) => {
   return (
     <div>
       <h1>Welcome all Pet Owners</h1>
-      <ImageContainer images={images} imgClass="home-preview-img" divClass="home-preview-container"/>
+      <Images images={images} imgClass="home-preview-img" divClass="home-preview-container"/>
       <Link to={'/uploadphotos'}><button>Upload Photos</button></Link>
       <PostBar />
       {posts.length ?  <PostContainer posts={posts}/> : "Loading!"}

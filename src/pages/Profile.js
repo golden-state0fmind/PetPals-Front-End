@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import ImageContainer from '../components/ImageContainer'
+import Images from '../components/Images'
 import PostBar from '../components/PostBar'
 import PostContainer from '../components/PostContainer'
 import '../css/profile.css'
@@ -24,7 +24,7 @@ const Profile = () => {
     return (
         <div>
             <h1>Profile</h1>
-            <ImageContainer imgClass="profile-preview-img" divClass='profile-preview-container' images={images} />
+            <Images imgClass="profile-preview-img" divClass='profile-preview-container' images={images} />
             <button> <Link to="/allphotos">See All</Link> </button>
             <button> <Link to="/allpets">See All Pets</Link> </button>
             <button> <Link to="/addpet">Add A Pet</Link> </button>
