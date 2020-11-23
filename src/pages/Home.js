@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import ImageModel from '../models/images'
 import ImageContainer from '../components/ImageContainer'
 import PostBar from '../components/PostBar'
 import PostContainer from '../components/PostContainer'
