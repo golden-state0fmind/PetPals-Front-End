@@ -6,15 +6,17 @@ import PostContainer from '../components/PostContainer'
 import {Link} from 'react-router-dom'
 import '../css/home.css'
 import PostModel from '../models/post'
+import RelationshipModel from '../models/relationship'
 
 const Home = (props) => {
   const [images,setImages] = useState([])
   const [posts, setPosts] = useState([])
+  const [userId] = useState(localStorage.getItem('id'))
   
-  const fetchImages=() => {
-    ImageModel.all().then((imgData)=>{
-      
-      setImages(imgData.images)
+  const fetchUser = () =>{
+    RelationshipModel.one(userId).then(user =>{
+      setImages(user.user.images)
+      console.log(user.user)
     })
   }
   
@@ -25,8 +27,9 @@ const Home = (props) => {
   }
 
 
-  useEffect( () => { fetchImages() },[])
+  // useEffect( () => { fetchImages() },[])
   useEffect( () => { fetchPosts() } ,[])
+  useEffect( () => { fetchUser() } ,[])
 
 
   return (
