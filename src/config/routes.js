@@ -17,6 +17,7 @@ import EditComment from "../pages/EditComment";
 import CreatePost from "../pages/CreatePost";
 import EditPost from "../pages/EditPost";
 import ShowPost from "../pages/ShowPost";
+import SearchResults from "../pages/SearchResults"
 //exporting routes
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
@@ -51,6 +52,7 @@ export default (props) => (
     <Route path='/createpost' component={CreatePost}  />
     <Route path='/post/:id/edit' component={EditPost}/>
     <Route path='/post/:id/show' component={ShowPost} />
+    <Route path='/search/:query' component={SearchResults} />
     <Route path='/login' render={(routeComponentProps) => {
       return <Login
         {...routeComponentProps}

@@ -3,7 +3,8 @@ const url = `http://localhost:4000/api/v1`
 class RelationshipModel {
   //show all for a specific post
   static search = (queryString) => {
-    return fetch(`${url}/relationship/${queryString}`).then(res => res.json())
+    console.log(queryString)
+    return fetch(`${url}/relationships/search/${queryString}`).then(res => res.json())
   }
 
 //  show one for edit commentId
