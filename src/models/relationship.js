@@ -8,8 +8,8 @@ class RelationshipModel {
   }
 
 //  show one for edit commentId
-  static one = (commentId) => {
-    return fetch(`${url}/comments/${commentId}`).then(res => res.json())
+  static one = (userId) => {
+    return fetch(`${url}/relationships/${userId}`).then(res => res.json())
   }
 
   //Update Comment

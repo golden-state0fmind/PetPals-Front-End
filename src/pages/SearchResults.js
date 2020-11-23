@@ -1,21 +1,25 @@
 import React, {useState, useEffect} from "react";
 import RelationshipModel from "../models/relationship"
+import Results from "../components/Results"
 
 const SearchResults = (props) => {
-    console.log(props.match.params.query)
+    
+    const [users, setUsers] = useState([])
+
     const fetchUsers = () =>{
         RelationshipModel.search(props.match.params.query)
         .then(foundUsers =>{
-            console.log(foundUsers)
+            setUsers(foundUsers.user)
         })
     }
+    console.log(users)
 
     useEffect(()=>{fetchUsers()},[])
 
 
     return (
         <div>
-            search
+            <Results users={users}/>
         </div>
     );
 }
