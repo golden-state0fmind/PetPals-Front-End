@@ -13,12 +13,12 @@ const Home = (props) => {
   const [posts, setPosts] = useState([]);
   const [userId] = useState(localStorage.getItem("id"));
 
-  const fetchUser = () => {
-    RelationshipModel.one(userId).then((user) => {
-      setImages(user.user.images);
-      console.log(user.user);
-    });
-  };
+  // const fetchUser = () => {
+  //   RelationshipModel.one(userId).then((user) => {
+  //     setImages(user.user.images);
+  //     console.log(user.user);
+  //   });
+  // };
 
   const fetchPosts = () => {
     PostModel.all().then((postData) => {
@@ -30,9 +30,9 @@ const Home = (props) => {
   useEffect(() => {
     fetchPosts();
   }, []);
-  useEffect(() => {
-    fetchUser();
-  }, []);
+  // useEffect(() => {
+  //   fetchUser();
+  // }, []);
 
   return (
     <Container>
