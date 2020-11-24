@@ -13,7 +13,7 @@ const Images = (props) => {
 
     return (
         <div className={props.divClass}>
-            {images}1
+            {images}
         </div>
     );
 }
