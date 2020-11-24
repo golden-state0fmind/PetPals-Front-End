@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import CommentModel from '../models/comment'
+import {Button} from 'react-bootstrap';
 
 const EditComment = (props) => {
     const [userId] = useState(localStorage.getItem('id'))
@@ -38,7 +39,7 @@ useEffect(()=>{fetchComment()},[])
                         value={content}
                     />
                 </div>
-                <button type="submit">Update Comment</button>
+                <Button variant="primary" type="submit">Update Comment</Button>{' '}
             </form>
         </div>
     )

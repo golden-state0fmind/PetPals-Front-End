@@ -1,41 +1,34 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import ImageContainer from '../components/ImageContainer'
+import Images from '../components/Images'
 import PostBar from '../components/PostBar'
 import PostContainer from '../components/PostContainer'
-import ImageModel from '../models/images'
-import PostModel from '../models/post'
 import '../css/profile.css'
+import RelationshipModel from '../models/relationship'
 
 const Profile = () => {
-    const [user, setUser] = useState(localStorage.getItem('id'))
+    const [userId] = useState(localStorage.getItem('id'))
     const [posts, setPosts] = useState([])
     const [images, setImages] = useState([])
 
-    const fetchUsersPosts = () => {
-        PostModel.oneUser(user).then((postData) => {
-            setPosts(postData.posts)
-        })
-    }
+  const fetchUser = () =>{
+    RelationshipModel.one(userId).then(user =>{
+      setPosts(user.user.posts)
+      setImages(user.user.images)
+      console.log(user.user)
+    })
+  }
 
-    const fetchImages = () => {
-        ImageModel.all().then((imgData) => {
-            console.log(imgData.images)
-            setImages(imgData.images)
-        })
-    }
-    useEffect(() => { fetchUsersPosts() }, [])
-    useEffect(() => { fetchImages() }, [])
-
+    useEffect(() => { fetchUser() }, [])
+    console.log(images)
     return (
         <div>
             <h1>Profile</h1>
-            <ImageContainer imgClass="profile-preview-img" divClass='profile-preview-container' images={images} />
+            <Images imgClass="profile-preview-img" divClass='profile-preview-container' images={images} />
             <button> <Link to="/allphotos">See All</Link> </button>
             <button> <Link to="/allpets">See All Pets</Link> </button>
             <button> <Link to="/addpet">Add A Pet</Link> </button>
             <Link to={'/uploadphotos'}><button>Upload Photos</button></Link>
-            {/* <ImageContainer imgClass="profile-preview-img" divClass='profile-preview-container' /> */}
             <PostBar />
             {posts.length ? <PostContainer posts={posts} /> : "Loading!"}
         </div>
