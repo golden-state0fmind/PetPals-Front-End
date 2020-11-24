@@ -37,7 +37,7 @@ const Header = (props) => {
 <img src="" alt=""/>
           {props.currentUser ?
             <>
-            <div className="dropdown" >
+            {/* <div className="dropdown" >
             <div className="img-wrapper">
               <button className="dropbtn"> <img className="nav-dropdown-img" src="https://moviepaws.files.wordpress.com/2016/10/catlady-simpsons.png" alt=""/> </button>
               </div>
@@ -48,18 +48,18 @@ const Header = (props) => {
              
               <a href="/logout" onClick={props.logout}>Log Out</a> 
              </div>
-            </div>
-              {/* <li><Link to={'/profile'}>Profile</Link></li>
+            </div> */}
+              <li><Link to={'/profile'}>Profile</Link></li>
               <li><Link to={'/allpets'}>All Pets</Link></li>
               <li><Link to={'/accountinfo'}>Account info</Link></li>
-              <li><a href="/logout" onClick={props.logout}>Log Out</a></li> */}
+              <li><a href="/logout" onClick={props.logout}>Log Out</a></li>
             </>
             :
             <>
-              {/* <li><Link to={'/'}>Take a tour</Link></li>
+              <li><Link to={'/'}>Take a tour</Link></li>
               <li><Link to={'/register'}>Register</Link></li>
               <li><Link to={'/login'}>Login</Link></li>
-               */}
+              
             </>
             
           }
