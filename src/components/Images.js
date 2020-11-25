@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Image from './Image'
 
 
+
 const Images = (props) => {
     const [currentUserId, setcurrentUserId] = useState(localStorage.getItem('id'))
     // If we are on home page display up to 8 img 
@@ -10,10 +11,12 @@ const Images = (props) => {
     const images = props.images.map((image, index) => (
         <Image key={index} imgUrl={image.imageUrl} imgClass={props.imgClass}/>
     ))
+    console.log(images.length)
+
 
     return (
         <div className={props.divClass}>
-            {images}1
+            {images}
         </div>
     );
 }

@@ -56,10 +56,10 @@ const Header = (props) => {
             </>
             :
             <>
-              {/* <li><Link to={'/'}>Take a tour</Link></li>
+              <li><Link to={'/'}>Take a tour</Link></li>
               <li><Link to={'/register'}>Register</Link></li>
               <li><Link to={'/login'}>Login</Link></li>
-               */}
+             
             </>
             
           }

@@ -14,7 +14,10 @@ const Profile = () => {
   const fetchUser = () =>{
     RelationshipModel.one(userId).then(user =>{
       setPosts(user.user.posts)
-      setImages(user.user.images)
+      for(let i=0; i<4; i++){
+        setImages(oldArray => [...oldArray,user.user.images[i]])
+      }
+      // setImages(user.user.images)
       console.log(user.user)
     })
   }

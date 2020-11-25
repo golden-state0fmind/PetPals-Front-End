@@ -30,15 +30,15 @@ const Home = (props) => {
   useEffect(() => {
     fetchPosts();
   }, []);
-  useEffect(() => {
-    fetchUser();
-  }, []);
+  // useEffect(() => {
+  //   fetchUser();
+  // }, []);
 
   return (
     <Container>
       <h1>Welcome all Pet Owners</h1>
       <Row>
-        <Col>
+        <Col className="img-container">
           <Images
             images={images}
             imgClass="home-preview-img"
