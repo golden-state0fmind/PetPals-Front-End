@@ -1,28 +1,34 @@
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
+import { Container } from 'react-bootstrap'
+
+
 
 const PetCard = (props) => {
   const [userId] = useState(localStorage.getItem('id'))
 
-  const allPets = props.pets.map((pet, index) => (
-    <>
-      {
-        userId == pet.userId ?
-          <div key={index}>
-            <img className="allpet-pic" src={pet.imgUrl} alt="current users pets"></img>
-            {pet.name}
-            {pet.species}
-            {pet.birthdate}
-            <button><Link to={`/pet/${pet.id}/edit`}>Edit Pet</Link></button>
-          </div>
-          : ""}
-    </>
-  ))
 
+ 
+  console.log(props.pet)
   return (
-    <div>
-      {allPets}
+    <div className="pet-card">
+      <img className="pet-card-img" src={props.pet.imgUrl} alt=""/>
+      <h4>{props.pet.name}</h4>
+      <p>{props.pet.birthdate}</p>
     </div>
+
+
+  //   <Card style={{ width: '18rem' }}>
+  //   <Card.Img variant="top" src={props.pet} />
+  //   <Card.Body>
+  //     <Card.Title>Card Title</Card.Title>
+  //     <Card.Text>
+  //       Some quick example text to build on the card title and make up the bulk of
+  //       the card's content.
+  //     </Card.Text>
+  //     <Button variant="primary">Go somewhere</Button>
+  //   </Card.Body>
+  // </Card>
   )
 }
 

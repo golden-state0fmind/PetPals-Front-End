@@ -8,3 +8,26 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.pet-card-img{
+    height: 100px;
+    width: 150px;
+
+}
+
+.pet-container{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: start;
+}
+
+.pet-card-container{
+    display: flex;
+}
+
+.profile-header{
+    width: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

@@ -18,7 +18,7 @@ const AllPets = (props) => {
     return (
         <div>
             <h1>All Pets Page</h1>
-            <PetCard pets={pets}/>
+            {/* <PetCard pets={pets}/> */}
         </div>
     )
 }
