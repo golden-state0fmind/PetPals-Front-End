@@ -25,7 +25,7 @@ const Profile = () => {
         <div>
             <h1>Profile</h1>
             <Images imgClass="profile-preview-img" divClass='profile-preview-container' images={images} />
-            <button> <Link to="/allphotos">See All</Link> </button>
+            <button> <Link to="/allphotos">See All Photos</Link> </button>
             <button> <Link to="/allpets">See All Pets</Link> </button>
             <button> <Link to="/addpet">Add A Pet</Link> </button>
             <Link to={'/uploadphotos'}><button>Upload Photos</button></Link>
