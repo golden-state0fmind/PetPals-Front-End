@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.scss'
 import { Link } from 'react-router-dom'
 import SearchBar from './SearchBar'
-import {Nav, Button, Form, FormControl, Navbar, NavDropdown} from 'react-bootstrap'
+import { Nav, Button, Form, FormControl, Navbar, NavDropdown } from 'react-bootstrap'
 // import Navbar from '@bit/react-bootstrap.react-bootstrap.navbar'
 
 
@@ -12,7 +12,7 @@ const Header = (props) => {
 
 
 
-        {/* <Navbar bg="dark" variant="dark" style={{ minWidth: 700 }}>
+      {/* <Navbar bg="dark" variant="dark" style={{ minWidth: 700 }}>
 					<Navbar.Brand href="#home"> </Navbar.Brand>
 					<Nav className="mr-auto">
 						<Nav.Link href="#profile">  </Nav.Link>
@@ -34,18 +34,18 @@ const Header = (props) => {
       </div>
       <div className="links">
         <ul>
-<img src="" alt=""/>
+          <img src="" alt="" />
           {props.currentUser ?
             <>
-            {/* <div className="dropdown" >
+              {/* <div className="dropdown" >
             <div className="img-wrapper">
               <button className="dropbtn"> <img className="nav-dropdown-img" src="https://moviepaws.files.wordpress.com/2016/10/catlady-simpsons.png" alt=""/> </button>
               </div>
               <div className="dropdown-content">
-           
+
                 <li><Link to={'/allpets'}>All Pets</Link></li>
                 <li> <Link to={'/accountinfo'}>Account info</Link></li>
-             
+
               <a href="/logout" onClick={props.logout}>Log Out</a> 
              </div>
             </div> */}
@@ -59,9 +59,9 @@ const Header = (props) => {
               <li><Link to={'/'}>Take a tour</Link></li>
               <li><Link to={'/register'}>Register</Link></li>
               <li><Link to={'/login'}>Login</Link></li>
-              
+
             </>
-            
+
           }
         </ul>
       </div>
