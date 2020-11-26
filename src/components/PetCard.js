@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
-import { Container } from 'react-bootstrap'
+
 
 
 
@@ -12,13 +12,13 @@ const PetCard = (props) => {
   console.log(props.pet)
   return (
      <>
-    {props.pet ? 
+    {props.pet !== undefined ? 
     <div className="pet-card">
       <img className="pet-card-img" src={props.pet.imgUrl} alt=""/>
       <h4>{props.pet.name}</h4>
       <p>{props.pet.birthdate}</p>
     </div>
-    : "dothis"}
+    : <p>Add</p>}
  
     </>
 
