@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import {Link} from 'react-router-dom'
 import PetCard from '../components/PetCard'
 import PetModel from '../models/pet'
 
@@ -17,7 +18,8 @@ const AllPets = (props) => {
 
     return (
         <div>
-            <h1>All Pets Page</h1>
+            <h1>Your Pets</h1>
+            <button> <Link to="/addpet">Add A Pet</Link> </button>
             <PetCard pets={pets}/>
         </div>
     )
