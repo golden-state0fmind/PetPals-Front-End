@@ -1,23 +1,23 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom'
+import "../css/searchbar.css";
 
 const SearchBar = () => {
 
     const [query, setQuery] = useState("")
-    console.log(query)
 
     return (
-      <>
         <form >
             <input 
+                className="search-input"
                 type="text" 
                 onChange={(e)=>{setQuery(e.target.value) }}
+                placeholder="search for friends..."
                 name="query"
             />
-            <button><Link to={`/search/${query}`}> Search </Link></button>
+            <button className="search-button"><Link to={`/search/${query}`}>fetch</Link></button>
             
         </form>
-      </>
     );
 }
 
