@@ -24,6 +24,11 @@ class RelationshipModel {
       .then(res => res.json())
   }
 
+  // Get all pending request for a user.
+  static pending = userId =>{
+    return fetch (`${url}/relationships/${userId}`).then(res => res.json())
+  }
+
 
   static create = (relationshipData) => {
     console.log(relationshipData)
