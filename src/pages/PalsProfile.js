@@ -17,14 +17,20 @@ const PalsProfile = (props) => {
     const [pets, setPets] = useState([])
     const [posts, setPosts] = useState([]);
 
+    console.log(currentUserId)
+  
 
     const fetchUsers = () =>{
         console.log("hello")
         RelationshipModel.one(palsId).then(user => {
             setPosts(user.user.posts);
+            console.log(user)
             setUserName(user.user.firstName)
             for (let i = 0; i < 4; i++) {
+              if(user.user.images.length>=1){
                 setImages((oldArray) => [...oldArray, user.user.images[i]]);
+
+              }
                 if(user.user.pets>=1){
                     setPets((oldArray) => [...oldArray, user.user.pets[i]]);
                 }
@@ -45,6 +51,9 @@ const PalsProfile = (props) => {
         userOne = palsId
         userTwo = currentUserId
       }
+      console.log('userOne',userOne)
+      console.log('userOTwo',userTwo)
+
       RelationshipModel.create({
         userOneId: userOne,
         userTwoId: userTwo,

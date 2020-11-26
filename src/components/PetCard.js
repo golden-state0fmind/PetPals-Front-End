@@ -7,9 +7,6 @@ import {Link} from 'react-router-dom'
 const PetCard = (props) => {
   const [userId] = useState(localStorage.getItem('id'))
 
-
-  
-  console.log(props.pet)
   return (
      <>
     {props.pet !== undefined ? 

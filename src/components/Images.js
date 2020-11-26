@@ -14,8 +14,6 @@ const Images = (props) => {
                 <Image key={index} imgUrl={image.imageUrl} imgClass={props.imgClass}/>
             ))
 
-
-    console.log(props.images)
     return (
         <div className={props.divClass}>
             {images.length >= 1 ? images : "No photos"}
