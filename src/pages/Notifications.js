@@ -2,10 +2,11 @@ import React, {useState, useEffect} from 'react';
 import Notification from '../components/Notification'
 import RelationshipModel from '../models/relationship'
 
-const Notifications = () => {
+const Notifications = (props) => {
     
     const [userId] = useState(localStorage.getItem('id'))
     const [users, setUsers] = useState([])
+    const [relationship, setRelationship] = useState([])
 
    const fethData = () => {
        RelationshipModel.pending(userId).then( requests =>{
@@ -13,18 +14,22 @@ const Notifications = () => {
             // Filtering out current user
             for(let i=0; i<requests.relationships.length; i++){
                 if(requests.relationships[i].userOne.id !== parseInt(userId)){
-                    setUsers((oldArray) => [...oldArray, requests.relationships[i].userOne]);
+                    setRelationship((oldArray) => [...oldArray, requests.relationships[i]]);
+                    // setUsers((oldArray) => [...oldArray, requests.relationships[i].userOne]);
                 }
                 if(requests.relationships[i].userTwo.id !== parseInt(userId)){  
-                    setUsers((oldArray) => [...oldArray, requests.relationships[i].userTwo]);
+                    setRelationship((oldArray) => [...oldArray, requests.relationships[i] ]);
+                    // setUsers((oldArray) => [...oldArray, requests.relationships[i].userTwo]);
                 }
             }
        })
     }
-    console.log(users)
 
-    const request = users.map((user, index) =>(
-        <Notification user={user} key={index}/>
+  
+    console.log(relationship)
+
+    const request = relationship.map((relationship, index) =>(
+        <Notification  key={index} relationship={relationship}/>
     ))
    
 

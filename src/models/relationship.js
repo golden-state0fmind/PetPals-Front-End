@@ -13,13 +13,14 @@ class RelationshipModel {
   }
 
   //Update Comment
-  static update = (commentData, commentId) => {
-    return fetch(`${url}/relationships/${commentId}`, {
+  static update = (relationshipData, relationshipId) => {
+    console.log(relationshipId)
+    return fetch(`${url}/relationships/${relationshipId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(commentData)
+      body: JSON.stringify(relationshipData)
     })
       .then(res => res.json())
   }
