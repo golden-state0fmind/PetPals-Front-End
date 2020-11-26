@@ -19,6 +19,7 @@ import EditPost from "../pages/EditPost";
 import ShowPost from "../pages/ShowPost";
 import SearchResults from "../pages/SearchResults"
 import PalsProfile from "../pages/PalsProfile"
+import Notifications from '../pages/Notifications'
 //exporting routes
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
@@ -55,6 +56,7 @@ export default (props) => (
     <Route path='/post/:id/show' component={ShowPost} />
     <Route path='/search/:query' component={SearchResults} />
     <Route path='/user/:id/profile' component={PalsProfile} />
+    <Route path='/notifications' component={Notifications}/>
     <Route path='/login' render={(routeComponentProps) => {
       return <Login
         {...routeComponentProps}

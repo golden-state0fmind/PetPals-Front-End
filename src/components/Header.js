@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.scss'
 import { Link } from 'react-router-dom'
 import SearchBar from './SearchBar'
-import {Nav, Button, Form, FormControl, Navbar, NavDropdown} from 'react-bootstrap'
+// import {Nav, Button, Form, FormControl, Navbar, NavDropdown} from 'react-bootstrap'
 // import Navbar from '@bit/react-bootstrap.react-bootstrap.navbar'
 
 
@@ -30,6 +30,7 @@ const Header = (props) => {
         <SearchBar />
         <ul>
           <li><Link to={'/profile'}>Profile</Link></li>
+          <li><Link to={'/notifications'}>Notifications</Link></li>
         </ul>
       </div>
       <div className="links">
