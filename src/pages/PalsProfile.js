@@ -8,48 +8,76 @@ import { Container, Row, Col } from "react-bootstrap";
 import {Link} from 'react-router-dom'
 
 
+
 const PalsProfile = (props) => {
     const [images, setImages] = useState([])
-    const [userId] = useState(props.match.params.id)
+    const [userName, setUserName] = useState()
+    const [currentUserId] = (localStorage.getItem('id'))
+    const [palsId] = useState(props.match.params.id)
     const [pets, setPets] = useState([])
     const [posts, setPosts] = useState([]);
 
 
     const fetchUsers = () =>{
         console.log("hello")
-        RelationshipModel.one(userId).then(user => {
+        RelationshipModel.one(palsId).then(user => {
             setPosts(user.user.posts);
+            setUserName(user.user.firstName)
             for (let i = 0; i < 4; i++) {
                 setImages((oldArray) => [...oldArray, user.user.images[i]]);
                 if(user.user.pets>=1){
                     setPets((oldArray) => [...oldArray, user.user.pets[i]]);
                 }
               }
-              
-            // setImages(user.user.images)
-            // setUser(user.user)
+
         })
     }
+
+    const handleSubmit = (e) => {
+      e.preventDefault()
+      console.log('Add a friend')
+      let userOne;
+      let userTwo;
+      if(currentUserId < palsId){
+        userOne = currentUserId
+        userTwo = palsId
+      }else{
+        userOne = palsId
+        userTwo = currentUserId
+      }
+      RelationshipModel.create({
+        userOneId: userOne,
+        userTwoId: userTwo,
+        status: 0,
+        actionUserId : currentUserId
+      })
+      .then(data => {
+          props.history.push('/')
+      })
+  }
     useEffect(()=>{fetchUsers()},[])
     return (
-        <div> 
-            {/* <Images imgClass="profile-preview-img" divClass='profile-preview-container' images={images} /> */}
+        <>
 
-            <Container>
-      <h1>Profile</h1>
+            <Container fluid>
+      <h1> {userName}'s Profile </h1>
       <Row>
         <Col >
           <Images
             imgClass="profile-preview-img"
             divClass="profile-preview-container"
             images={images}
-          />
+          />     
+          <form onSubmit={handleSubmit}>
+
+                 <button>Add friend</button>
+          </form>
         </Col>
-        <Col lassName="profile-header">
+        <Col className="profile-header">
           <PetCardContainer pets={pets} />
         </Col>
       </Row>
-      <button>
+      {/* <button>
         {" "}
         <Link to="/allphotos">See All</Link>{" "}
       </button>
@@ -63,11 +91,11 @@ const PalsProfile = (props) => {
       </button>
       <Link to={"/uploadphotos"}>
         <button>Upload Photos</button>
-      </Link>
+      </Link> */}
       <PostBar />
       {posts.length ? <PostContainer posts={posts} /> : "Loading!"}
     </Container>
-        </div>
+        </>
     );
 }
 
