@@ -33,7 +33,6 @@ const Profile = () => {
   useEffect(() => {
     fetchUser();
   }, []);
-  console.log(images);
   return (
     <Container>
       <h1>Profile</h1>

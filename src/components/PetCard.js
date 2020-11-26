@@ -8,7 +8,7 @@ const PetCard = (props) => {
   const [userId] = useState(localStorage.getItem('id'))
 
 
- 
+  
   console.log(props.pet)
   return (
      <>

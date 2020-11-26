@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom'
 const SearchBar = () => {
 
     const [query, setQuery] = useState("")
-    console.log(query)
 
     return (
       <>
