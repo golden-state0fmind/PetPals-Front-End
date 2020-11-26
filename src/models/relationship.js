@@ -14,7 +14,7 @@ class RelationshipModel {
 
   //Update Comment
   static update = (commentData, commentId) => {
-    return fetch(`${url}/comments/${commentId}`, {
+    return fetch(`${url}/relationships/${commentId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
@@ -25,13 +25,15 @@ class RelationshipModel {
   }
 
 
-  static create = (commentData) => {
-    return fetch(`${url}/comments`, {
+  static create = (relationshipData) => {
+    console.log(relationshipData)
+    console.log("test")
+    return fetch(`${url}/relationships`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(commentData)
+      body: JSON.stringify(relationshipData)
     })
       .then(res => res.json())
   }
