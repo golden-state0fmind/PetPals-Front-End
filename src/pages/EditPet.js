@@ -24,8 +24,7 @@ const EditPet = (props) => {
             name,
             birthdate
         }, petId).then(data => {
-            console.log("DID YOU FINISH WIT HTHE BACK END?")
-            props.history.push('/')
+            props.history.push('/allpets')
         })
     }
 
@@ -33,7 +32,7 @@ const EditPet = (props) => {
     const handleDelete = (e) => {
         e.preventDefault()
         PetModel.delete(petId).then(data => {
-            props.history.push('/')
+            props.history.push('/allpets')
         })
     }
 
