@@ -20,7 +20,7 @@ const Profile = () => {
       setPosts(user.user.posts);
       for (let i = 0; i < 4; i++) {
         setImages((oldArray) => [...oldArray, user.user.images[i]]);
-        if(user.user.pets>=1){
+        if(user.user.pets.length>=1){
 
           setPets((oldArray) => [...oldArray, user.user.pets[i]]);
         }
@@ -34,10 +34,10 @@ const Profile = () => {
     fetchUser();
   }, []);
   return (
-    <Container>
-      <h1>Profile</h1>
+    <Container fluid>
+      <h1>Pals</h1>
       <Row>
-        <Col >
+        <Col sm={4}>
           <Images
             imgClass="profile-preview-img"
             divClass="profile-preview-container"

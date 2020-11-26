@@ -15,11 +15,14 @@
 
 }
 
+
 .pet-container{
     display: flex;
     flex-wrap: wrap;
     text-align: start;
+    justify-content: space-around;
 }
+
 
 .pet-card-container{
     display: flex;
