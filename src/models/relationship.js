@@ -7,34 +7,34 @@ class RelationshipModel {
     return fetch(`${url}/relationships/search/${queryString}`).then(res => res.json())
   }
 
-//  show one for edit commentId
+//  show one 
   static one = (userId) => {
     return fetch(`${url}/relationships/${userId}`).then(res => res.json())
   }
 
-  //Update Comment
-  static update = (commentData, commentId) => {
-    return fetch(`${url}/comments/${commentId}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(commentData)
-    })
-      .then(res => res.json())
-  }
+//   //Update Comment
+//   static update = (commentData, commentId) => {
+//     return fetch(`${url}/comments/${commentId}`, {
+//       method: "PUT",
+//       headers: {
+//         "Content-Type": "application/json"
+//       },
+//       body: JSON.stringify(commentData)
+//     })
+//       .then(res => res.json())
+//   }
 
 
-  static create = (commentData) => {
-    return fetch(`${url}/comments`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(commentData)
-    })
-      .then(res => res.json())
-  }
+//   static create = (commentData) => {
+//     return fetch(`${url}/comments`, {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json"
+//       },
+//       body: JSON.stringify(commentData)
+//     })
+//       .then(res => res.json())
+//   }
 }
 
 export default RelationshipModel
