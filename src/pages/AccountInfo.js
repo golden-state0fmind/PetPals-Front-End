@@ -27,7 +27,7 @@ const AccountInfo = () => {
             <p><span class="bold">Name:</span> {firstName} {lastName}</p>
             <p><span class="bold">Birthday:</span> {birthdate}</p>
             <p><span class="bold">Email:</span> {email}</p>
-            <button><Link to={`/post/${userId}/edit`}>Edit Info</Link></button>
+            {/* <button><Link to={`/post/${userId}/edit`}>Edit Info</Link></button> */}
         </div>
     )
 }
