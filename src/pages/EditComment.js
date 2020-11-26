@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import CommentModel from '../models/comment'
-import {Button} from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 const EditComment = (props) => {
     const [userId] = useState(localStorage.getItem('id'))
@@ -8,21 +8,28 @@ const EditComment = (props) => {
     const [content, setContent] = useState('')
 
     const fetchComment = () => {
-        console.log("ARE WE IN FETCH COMMENTS?!", commentId)
-        CommentModel.one(commentId).then((commentData) =>{
+        CommentModel.one(commentId).then((commentData) => {
             setContent(commentData.comment.content)
         })
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        CommentModel.update({content}, commentId)
-        .then(data => {
+        CommentModel.update({ content }, commentId)
+            .then(data => {
+                props.history.push('/')
+            })
+    }
+
+    //need a function for the delete button 
+    const handleDelete = (e) => {
+        e.preventDefault()
+        CommentModel.delete(commentId).then(data => {
             props.history.push('/')
         })
     }
 
-useEffect(()=>{fetchComment()},[])
+    useEffect(() => { fetchComment() }, [])
 
     return (
         <div>
@@ -39,7 +46,8 @@ useEffect(()=>{fetchComment()},[])
                         value={content}
                     />
                 </div>
-                <Button variant="primary" type="submit">Update Comment</Button>{' '}
+                <Button type="submit">Update Comment</Button>
+                <form onSubmit={handleDelete}><button type="submit">Delete Comment</button></form>
             </form>
         </div>
     )
