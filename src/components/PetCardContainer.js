@@ -2,6 +2,7 @@ import React from 'react';
 import PetCard from './PetCard'
 
 const PetCardContainer = (props) => {
+    console.log(props.pets)
     const pets = props.pets.map((pet,index) =>(
         <PetCard key={index} pet={pet}/>
     ))

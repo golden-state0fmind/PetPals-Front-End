@@ -19,7 +19,10 @@ const Profile = () => {
     RelationshipModel.one(userId).then((user) => {
       setPosts(user.user.posts);
       for (let i = 0; i < 4; i++) {
-        setImages((oldArray) => [...oldArray, user.user.images[i]]);
+        if(user.user.images >=1){
+
+          setImages((oldArray) => [...oldArray, user.user.images[i]]);
+        }
         if(user.user.pets.length>=1){
 
           setPets((oldArray) => [...oldArray, user.user.pets[i]]);
