@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import Images from "../components/Images";
 import PostBar from "../components/PostBar";
 import PostContainer from "../components/PostContainer";
-import "../css/profile.css";
+// import "../css/profile.css";
 import RelationshipModel from "../models/relationship";
 import PetCardContainer from "../components/PetCardContainer";
 import { Container, Row, Col } from "react-bootstrap";
+// import PostContainer from "../components/PostContainer";
 
 const Profile = () => {
   const [userId] = useState(localStorage.getItem("id"));
@@ -19,7 +20,10 @@ const Profile = () => {
       setPosts(user.user.posts);
       for (let i = 0; i < 4; i++) {
         setImages((oldArray) => [...oldArray, user.user.images[i]]);
-        setPets((oldArray) => [...oldArray, user.user.pets[i]]);
+        if(user.user.pets>=1){
+
+          setPets((oldArray) => [...oldArray, user.user.pets[i]]);
+        }
       }
       // setImages(user.user.images)
       console.log(user.user);
