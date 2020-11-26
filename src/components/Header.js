@@ -20,6 +20,7 @@ const Header = (props) => {
               <div className="dropbtn"><img className=" dropdown-img" src="https://res.cloudinary.com/petpals/image/upload/v1606381699/oo53bublc5vmutnhsprr.png" alt="Temporary Profile Pic" /> </div>
             </div>
             <div className="dropdown-content">
+                  <li><span className="petpals">PetPals</span></li>
               {props.currentUser ?
                 <>
                   <li className="menu-li"><Link to={'/profile'}>Profile</Link></li>
