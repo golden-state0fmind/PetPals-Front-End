@@ -8,7 +8,7 @@ const Images = (props) => {
     // If on profile page half the size and 2 comontents  
     console.log(props.imgClass)
     const images = props.images.map((image, index) => (
-        <Image key={index} imgUrl={image.imageUrl} imgClass={props.imgClass}/>
+        <Image key={index} imgUrl={image.imgUrl} imgClass={props.imgClass}/>
     ))
 
     return (

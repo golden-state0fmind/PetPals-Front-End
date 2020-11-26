@@ -5,7 +5,7 @@ const Image = (props) => {
     return (
         <div >
         <img className={props.imgClass} src={props.imgUrl} alt="Users personal photos"  />
-        {/* : ""} */}
+        {/* : "" */}
         </div>
     );
 }
