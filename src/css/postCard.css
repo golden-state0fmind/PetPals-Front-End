@@ -1,0 +1,16 @@
+.post-container{
+    border: 2px solid black;
+}
+
+.post-title{
+    text-align: left;
+    margin-left: 28px
+}
+
+.button-wrapper{
+    text-align: end;
+}
+
+.post-bar{
+    text-align: end;
+}
