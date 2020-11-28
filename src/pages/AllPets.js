@@ -8,13 +8,6 @@ const AllPets = (props) => {
     const [pets, setPets] = useState([])
     const [userId] = useState(localStorage.getItem('id'))
 
-
-    // const fetchPets = () => {
-    //     PetModel.all().then((petData) => {
-    //         setPets(petData.pets)
-    //     })
-    // }
-
     const fetchUserPets = () => {
         RelationshipModel.one(userId).then(user => {
             setPets(user.user.pets)
