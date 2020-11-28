@@ -11,6 +11,7 @@ const PostCard = (props) => {
             <p> {post.content} </p>
             <p>{post.createdAt}</p>
             <div className="button-wrapper">
+            <button><Link to={`/post/${post.id}/show`}>View Post</Link></button>
             <button><Link to={`/addcomment/${post.id}`}>Add Comment</Link></button>
             {post.userId === userId ? 
             <button><Link to={`/post/${post.id}/edit`}>Edit Post</Link></button> : "" }
