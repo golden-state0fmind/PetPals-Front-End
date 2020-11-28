@@ -18,7 +18,7 @@ const AddPet = (props) => {
             imgUrl,
             userId,
         }).then(data => {
-            props.history.push('/')
+            props.history.push('/allpets')
         })
     }
 
