@@ -3,13 +3,13 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Routes from './config/routes'
 import './App.css'
+import './css/profile.css'
 import UserModel from './models/user'
 
 function App() {
 
   const [currentUser, setCurrentUser] = useState(localStorage.getItem('id'))
   const storeUser = (user) => {
-    console.log(user)
     setCurrentUser({ user })
     localStorage.setItem('id', user.id)
     localStorage.setItem('firstName', user.firstName)
