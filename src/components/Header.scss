@@ -1,5 +1,6 @@
 header {
   background-color: #248EA6;
+  background-image: url(https://www.featurepics.com/StockImage/20160817/turquoise-bricks-stock-image-4192039.jpg);
   text-align: left;
   display: flex;
   justify-content: space-between;
@@ -28,6 +29,10 @@ header {
   button {
     background-color: #F23030;
     text-decoration: none;
+  }
+
+  .home-emoji {
+    font-size:4rem;
   }
 
 .petpals{
