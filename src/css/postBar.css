@@ -1,0 +1,36 @@
+/* BUTTON CSS */
+
+/* .pb-button {
+  background-color: #F23030;
+  text-decoration: none;
+  padding: 0px 3px 0px 2px;
+  border-radius: 0px 15px 15px 0px;
+  border: none;
+  color: #FFF;
+} */
+
+.align-statusbar{
+  width:80%;
+}
+
+.fake-statusbar-container{
+  display: flex;
+  justify-content: space-around;
+}
+
+.fake-statusbar{
+  background-color: #FFF;
+  border: 1px solid grey;
+  border-radius: 15px ;
+  margin: 2%;
+  padding: 0 1%;
+  width: 60%;
+  max-width: 350px;
+  min-width: 150px;
+  text-align: left;
+}
+
+.fake-statustext{
+  color: grey;
+  align-self: flex-end;
+}
