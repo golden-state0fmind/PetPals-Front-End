@@ -72,13 +72,13 @@ const Profile = () => {
         </Col>
       </Row>
       <div className="post-bar">
-      <PostBar />
+        <PostBar />
       </div>
       {posts.length ? (
         <PostContainer user={userName} posts={posts} />
       ) : (
-        "Loading!"
-      )}
+          "Loading!"
+        )}
     </Container>
   );
 };
