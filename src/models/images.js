@@ -5,6 +5,10 @@ class ImageModel {
     return fetch(`${url}/images`).then(res => res.json())
   }
 
+  static limit = () => {
+    return fetch(`${url}/images/4`).then(res => res.json())
+  }
+
   static updateProfilePic = (imgData, userId) => {
     return fetch(`${url}/images/profilepic/${userId}`, {
       method: "PUT",
