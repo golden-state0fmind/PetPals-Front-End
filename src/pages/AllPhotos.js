@@ -19,7 +19,7 @@ const AllPhotos = (props) => {
     ImageModel.updateProfilePic({
       imgUrl: imgUrl
     }, userId).then(data => {
-      props.history.push('/')
+      props.history.push('/profile')
     })
 }
 

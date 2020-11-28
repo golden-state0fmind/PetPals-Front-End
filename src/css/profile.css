@@ -100,12 +100,3 @@
     border-color: #F2D338;
     border-radius: 50%;
 }
-
-.profile-preview-img{
-    width:50px;
-    height: 50px;
-}
-
-.profile-preview-container{
-    display: flex;
-}
