@@ -1,5 +1,6 @@
 import React from 'react';
 import PetCard from './PetCard'
+import {Link} from 'react-router-dom'
 
 const PetCardContainer = (props) => {
     const pets = props.pets.map((pet,index) =>(
@@ -7,7 +8,7 @@ const PetCardContainer = (props) => {
     ))
     return (
         <div className="pet-container">
-            {pets.length>= 1 ? pets: <p>No pets added</p>}
+            {pets.length>= 1 ? pets: <Link to="/addpet">Add A Pet</Link>}
         </div>
     );
 }
