@@ -11,7 +11,6 @@ const AccountInfo = () => {
 
     const fetchUser = () => {
         RelationshipModel.one(userId).then(user => {
-            console.log('THIS IS THE USERINFO YOU GOT', user.user)
             setFirstName(user.user.firstName)
             setLastName(user.user.lastName)
             setBirthDate(user.user.birthdate)
