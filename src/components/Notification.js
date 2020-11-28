@@ -12,15 +12,14 @@ const Notification = (props) => {
             actionUserId: userId
         }, props.relationship.id)
         .then(data => {
-            // props.history.push('/')
+            props.history.push('/')
         })
     }
 
     return (
         <div>
         {props.relationship.userOne.id !== userId ? <h3>{props.relationship.userOne.firstName}  {props.relationship.userOne.lastName}</h3> : ""}
-        {props.relationship.userTwo.id !== userId ? <h3>{props.relationship.userTwo.firstName}  {props.relationship.userOne.lastName}</h3> : ""}
-            {/* <h3>{props.user.firstName} {props.relationship} </h3> */}
+        {props.relationship.userTwo.id !== userId ? <h3>{props.relationship.userTwo.firstName}  {props.relationship.userTwo.lastName}</h3> : ""}
             <button onClick={handleSubmit}>Accept friend request</button>
         </div>
     );
