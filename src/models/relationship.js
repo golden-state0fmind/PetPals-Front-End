@@ -1,18 +1,18 @@
 const url = `http://localhost:4000/api/v1`
 
 class RelationshipModel {
-  //show all for a specific post
+  //Search results
   static search = (queryString) => {
     console.log(queryString)
     return fetch(`${url}/relationships/search/${queryString}`).then(res => res.json())
   }
 
-//  show one for edit commentId
+//  Gets a single user
   static one = (userId) => {
     return fetch(`${url}/relationships/${userId}`).then(res => res.json())
   }
 
-  //Update Comment
+  //Updates relationship status
   static update = (relationshipData, relationshipId) => {
     console.log(relationshipId)
     return fetch(`${url}/relationships/${relationshipId}`, {
@@ -35,7 +35,7 @@ class RelationshipModel {
     return fetch (`${url}/relationships/friends/limit/${userId}`).then(res => res.json())  
   }
 
-
+  // Sends a friend request
   static create = (relationshipData) => {
     console.log(relationshipData)
     console.log("test")
