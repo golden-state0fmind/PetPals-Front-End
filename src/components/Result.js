@@ -1,11 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 
 const Result = (props) => {
-    console.log(props.index)
+  const [userId] = useState(parseInt(localStorage.getItem('id')))
     return (
         <div>
-        <Link to={`/user/${props.user.id}/profile`}><h3> {props.user.firstName} {props.user.lastName}</h3></Link> 
+        {userId === props.user.id ?
+        <Link to={`/user/${props.user.id}/profile`}><h3> {props.user.firstName} {props.user.lastName}</h3></Link> :
+
+        <Link to={`/profile`}><h3> {props.user.firstName} {props.user.lastName}</h3></Link>
+        }
       </div>
     )
 }

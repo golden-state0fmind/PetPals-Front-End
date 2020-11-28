@@ -1,0 +1,64 @@
+.profile-preview-img{
+    width:100px;
+    height: 100px
+}
+
+.profile-preview-container{
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pet-card-img{
+    height: 100px;
+    width: 150px;
+
+}
+
+
+.pet-container{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: start;
+    justify-content: space-around;
+}
+
+
+.pet-card-container{
+    display: flex;
+}
+
+.profile-header{
+    width: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 50px 0 0 20px;
+
+}
+
+.friends-list-profile{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 50px 0 0 20px;
+}
+.pet-card-btns-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 41px;
+  
+}
+
+.friends-container{
+    border: 2px solid black;
+    margin: 100px 0;
+}
+

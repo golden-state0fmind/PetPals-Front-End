@@ -18,9 +18,8 @@ const AllPets = (props) => {
 
     return (
         <div>
-            <h1>Your Pets</h1>
-            <button> <Link to="/addpet">Add A Pet</Link> </button>
-            <PetCard pets={pets}/>
+            <h1>All Pets Page</h1>
+            {/* <PetCard pets={pets}/> */}
         </div>
     )
 }

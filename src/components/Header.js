@@ -24,6 +24,7 @@ const Header = (props) => {
               {props.currentUser ?
                 <>
                   <li className="menu-li"><Link to={'/profile'}>Profile</Link></li>
+                  <li className="menu-li"><Link to={'/notifications'}>Notifications</Link></li>
                   <li className="menu-li"><Link to={'/allpets'}>My Pets</Link></li>
                   <li className="menu-li"><Link to={'/allphotos'}>Photos</Link></li>
                   <li className="menu-li"><Link to={'/accountinfo'}>Account</Link></li>
