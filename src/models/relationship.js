@@ -31,6 +31,10 @@ class RelationshipModel {
     return fetch (`${url}/relationships/pending/${userId}`).then(res => res.json())
   }
 
+  static friendsLimit = userId =>{
+    return fetch (`${url}/relationships/friends/limit/${userId}`).then(res => res.json())  
+  }
+
 
   static create = (relationshipData) => {
     console.log(relationshipData)
