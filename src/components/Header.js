@@ -2,16 +2,19 @@ import React from 'react';
 import './Header.scss'
 import { Link } from 'react-router-dom'
 import SearchBar from './SearchBar'
+
 import { Nav, Button, Form, FormControl, Navbar, NavDropdown } from 'react-bootstrap'
-// import Navbar from '@bit/react-bootstrap.react-bootstrap.navbar'
+
 
 
 const Header = (props) => {
   return (
     <header className="navbar">
         <ul>
+
           <li><Link to={'/'}>🏠</Link> </li>
           <li><SearchBar /></li>
+
         </ul>
 
         <ul>
@@ -38,6 +41,7 @@ const Header = (props) => {
                 </>
               }
             </div>
+
           </div>
         </ul>
     </header>
