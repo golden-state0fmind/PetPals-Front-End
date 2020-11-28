@@ -21,6 +21,7 @@ const CreatePost = (props) => {
 
   return (
     <div>
+      <h3>What's on your mind?</h3>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <textarea
