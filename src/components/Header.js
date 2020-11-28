@@ -2,70 +2,48 @@ import React from 'react';
 import './Header.scss'
 import { Link } from 'react-router-dom'
 import SearchBar from './SearchBar'
-// import {Nav, Button, Form, FormControl, Navbar, NavDropdown} from 'react-bootstrap'
-// import Navbar from '@bit/react-bootstrap.react-bootstrap.navbar'
+
+import { Nav, Button, Form, FormControl, Navbar, NavDropdown } from 'react-bootstrap'
+
 
 
 const Header = (props) => {
   return (
-    <header>
-
-
-
-        {/* <Navbar bg="dark" variant="dark" style={{ minWidth: 700 }}>
-					<Navbar.Brand href="#home"> </Navbar.Brand>
-					<Nav className="mr-auto">
-						<Nav.Link href="#profile">  </Nav.Link>
-						<Nav.Link href="#Acount-info"> <Link to={'/accountinfo'}>Account info</Link> </Nav.Link>
-					<Form inline>
-						<FormControl type="text" placeholder="Search" className="mr-sm-2" />
-						<Button variant="outline-info">Search</Button>
-					</Form>
-					</Nav>
-						<Nav.Link href="#pricing">Pricing</Nav.Link>
-				</Navbar> */}
-
-      <div className="logo">
-        <Link to={'/'}>Pet Pals Home</Link>
-        <SearchBar />
+    <header className="navbar">
         <ul>
-          <li><Link to={'/profile'}>Profile</Link></li>
-          <li><Link to={'/notifications'}>Notifications</Link></li>
+
+          <li><Link to={'/'}>🏠</Link> </li>
+          <li><SearchBar /></li>
+
         </ul>
-      </div>
-      <div className="links">
+
         <ul>
-<img src="" alt=""/>
-          {props.currentUser ?
-            <>
-            <div className="dropdown" >
-            <div className="img-wrapper">
-              <button className="dropbtn"> <img className="nav-dropdown-img" src="https://moviepaws.files.wordpress.com/2016/10/catlady-simpsons.png" alt=""/> </button>
-              </div>
-              <div className="dropdown-content">
-           
-                <li><Link to={'/allpets'}>All Pets</Link></li>
-                <li> <Link to={'/accountinfo'}>Account info</Link></li>
-             
-              <a href="/logout" onClick={props.logout}>Log Out</a> 
-             </div>
+          <div className="dropdown" >
+            <div className="menu-button">
+              <div className="dropbtn"><img className=" dropdown-img" src="https://res.cloudinary.com/petpals/image/upload/v1606381699/oo53bublc5vmutnhsprr.png" alt="Temporary Profile Pic" /> </div>
             </div>
-              {/* <li><Link to={'/profile'}>Profile</Link></li>
-              <li><Link to={'/allpets'}>All Pets</Link></li>
-              <li><Link to={'/accountinfo'}>Account info</Link></li>
-              <li><a href="/logout" onClick={props.logout}>Log Out</a></li> */}
-            </>
-            :
-            <>
-              <li><Link to={'/'}>Take a tour</Link></li>
-              <li><Link to={'/register'}>Register</Link></li>
-              <li><Link to={'/login'}>Login</Link></li>
-             
-            </>
-            
-          }
+            <div className="dropdown-content">
+                  <li><span className="petpals">PetPals</span></li>
+              {props.currentUser ?
+                <>
+                  <li className="menu-li"><Link to={'/profile'}>Profile</Link></li>
+                  <li className="menu-li"><Link to={'/notifications'}>Notifications</Link></li>
+                  <li className="menu-li"><Link to={'/allpets'}>My Pets</Link></li>
+                  <li className="menu-li"><Link to={'/allphotos'}>Photos</Link></li>
+                  <li className="menu-li"><Link to={'/accountinfo'}>Account</Link></li>
+                  <li className="menu-li"><a href="/logout" onClick={props.logout}>Log Out</a></li>
+                </>
+                :
+                <>
+                  <li className="menu-li"><Link to={'/'}>Take a tour</Link></li>
+                  <li className="menu-li"><Link to={'/register'}>Register</Link></li>
+                  <li className="menu-li"><Link to={'/login'}>Login</Link></li>
+                </>
+              }
+            </div>
+
+          </div>
         </ul>
-      </div>
     </header>
   );
 }

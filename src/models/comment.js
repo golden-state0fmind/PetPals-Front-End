@@ -34,6 +34,13 @@ class CommentModel {
     })
       .then(res => res.json())
   }
+
+  static delete = (commentId) => {
+    return fetch(`${url}/comments/${commentId}`, {method: "DELETE"})
+    .then(res => res.json())
+  }
+
+
 }
 
 export default CommentModel

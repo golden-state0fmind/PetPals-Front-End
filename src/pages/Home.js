@@ -7,18 +7,25 @@ import "../css/home.css";
 import PostModel from "../models/post";
 import RelationshipModel from "../models/relationship";
 import { Container, Row, Col } from "react-bootstrap";
+import ImageModel from "../models/images"
 
 const Home = (props) => {
   const [images, setImages] = useState([]);
   const [posts, setPosts] = useState([]);
-  const [userId] = useState(localStorage.getItem("id"));
+  // const [userId] = useState(localStorage.getItem("id"));
 
-  const fetchUser = () => {
-    RelationshipModel.one(userId).then((user) => {
-      setImages(user.user.images);
-      console.log(user.user);
-    });
-  };
+  // const fetchUser = () => {
+  //   RelationshipModel.one(userId).then((user) => {
+  //     setImages(user.user.images);
+  //     console.log(user.user);
+  //   });
+  // };
+
+  const fetchImages=() => {
+    ImageModel.all().then((imgData)=>{
+      setImages(imgData.images)
+    })
+  }
 
   const fetchPosts = () => {
     PostModel.all().then((postData) => {
@@ -26,7 +33,7 @@ const Home = (props) => {
     });
   };
 
-  // useEffect( () => { fetchImages() },[])
+  useEffect( () => { fetchImages() },[])
   useEffect(() => {
     fetchPosts();
   }, []);
@@ -44,9 +51,9 @@ const Home = (props) => {
             imgClass="home-preview-img"
             divClass="home-preview-container"
           />
-          <Link to={"/uploadphotos"}>
+          {/* <Link to={"/uploadphotos"}>
             <button>Upload Photos</button>
-          </Link>
+          </Link> */}
         </Col>
       </Row>
       <Row>

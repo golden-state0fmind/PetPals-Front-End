@@ -20,6 +20,7 @@ const EditPost = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         PostModel.update({
+            imgUrl,
             content,
             userId,
         }, postId).then(data => {
@@ -40,6 +41,12 @@ const EditPost = (props) => {
             <img src={imgUrl} alt="This is your post image" />
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
+                    <input
+                        onChange={(e) => { setImgUrl(e.target.value) }}
+                        type="text"
+                        name="imgUrl"
+                        value={imgUrl}
+                    />
                     <textarea
                         onChange={(e) => { setContent(e.target.value) }}
                         rows="5"

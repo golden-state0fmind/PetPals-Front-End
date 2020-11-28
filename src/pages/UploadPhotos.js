@@ -4,13 +4,13 @@ import ImageModel from '../models/images'
 import ImageUploadBar from '../components/ImageUploadBar'
 
 const UploadPhotos = (props) => {
-    const [userId, setUserId] = useState(localStorage.getItem('id'))
-    const [imageUrl, setImageUrl] = useState()
+    const [userId] = useState(localStorage.getItem('id'))
+    const [imgUrl, setImgUrl] = useState()
 
     const handleSubmit = (e) => {
         e.preventDefault()
         ImageModel.create({
-            imageUrl,
+            imgUrl,
             userId,
         }).then(data => {
             props.history.push('/')
@@ -20,7 +20,7 @@ const UploadPhotos = (props) => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <ImageUploadBar setImgUrl={setImageUrl}/>
+                <ImageUploadBar setImgUrl={setImgUrl}/>
                 <button type="submit">Save</button>
             </form>
         </div>

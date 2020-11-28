@@ -36,8 +36,8 @@ const allImages = images.map((image, index) => (
   <div key={index}>
   {image.userId == currentUserId ?
     <>
-      <img src={image.imageUrl} alt="User personal images" className='all-image' id={image.id} />
-      <form onSubmit={(e) => handleProfilePic(e, currentUserId, image.imageUrl)}> <button>Make Profile pic</button></form>
+      <img src={image.imgUrl} alt="User personal images" className='all-image' id={image.id} />
+      <form onSubmit={(e) => handleProfilePic(e, currentUserId, image.imgUrl)}> <button type="submit">Make Profile pic</button></form>
 
       <form onSubmit={(e) => handleDelete(e, image.id)}>
         <button type="submit">Delete</button></form>
@@ -48,7 +48,8 @@ const allImages = images.map((image, index) => (
 
 return (
   <div>
-    <h1>All Photos</h1>
+    <h1>Your Photos</h1>
+    <Link to={'/uploadphotos'}><button>Upload Photos</button></Link>
     {allImages}
   </div>
 )

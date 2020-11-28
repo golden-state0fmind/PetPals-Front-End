@@ -1,0 +1,13 @@
+.search-input {
+  border-radius: 15px;
+  border: 2px solid #73AD21;
+  padding: 0 5%;
+  width: 75%;
+}
+
+.search-button {
+  border-radius: 15px;
+  padding: 0px;
+  width: 25%;
+  color: black
+}

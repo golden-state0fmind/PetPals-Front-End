@@ -60,7 +60,7 @@ class Register extends Component {
                         <label htmlFor="birthdate">Birthdate</label>
                         <input
                             onChange={this.handleChange}
-                            type="text"
+                            type="date"
                             id="birthdate"
                             name="birthdate"
                             value={this.state.birthdate}

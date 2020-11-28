@@ -7,8 +7,10 @@ const EditPet = (props) => {
     const [birthdate, setBirthdate] = useState('')
     const [petId] = useState(props.match.params.id)
     const [userId] = useState(localStorage.getItem('id'))
+
     const fetchPet = () => {
         PetModel.one(props.match.params.id).then((petData) => {
+            console.log(petData.pet)
             setName(petData.pet.name)
             setBirthdate(petData.pet.birthdate)
         })
@@ -18,16 +20,21 @@ const EditPet = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log("ARE WE CLICKING POST?", name, birthdate, petId)
         PetModel.update({
             name,
             birthdate
         }, petId).then(data => {
-            console.log("DID YOU FINISH WIT HTHE BACK END?")
-            props.history.push('/')
+            props.history.push('/allpets')
         })
     }
 
+    //need a function for the delete button 
+    const handleDelete = (e) => {
+        e.preventDefault()
+        PetModel.delete(petId).then(data => {
+            props.history.push('/allpets')
+        })
+    }
 
     return (
         <div>
@@ -55,7 +62,8 @@ const EditPet = (props) => {
                         value={birthdate}
                     /><br />
                 </div>
-                <button type="submit">Update</button>
+                <button type="submit">Update Pet</button>
+                <form onSubmit={handleDelete}><button type="submit">Delete Pet</button></form>
             </form>
         </div>
     )

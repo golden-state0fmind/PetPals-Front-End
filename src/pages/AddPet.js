@@ -61,7 +61,7 @@ const AddPet = (props) => {
                 </div>
                 <p>Upload an Image:</p>
                 <ImageUploadBar setImgUrl={setImgUrl} />
-                <button type="submit">Post</button>
+                <button type="submit">Add Pet</button>
             </form>
         </div>
     )

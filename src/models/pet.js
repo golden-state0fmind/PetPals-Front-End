@@ -32,6 +32,14 @@ class PetModel {
     })
       .then(res => res.json())
   }
+
+  static delete = (petId) => {
+    return fetch(`${url}/pets/delete/${petId}`, { method: "DELETE"})
+      .then(res => res.json())
+  }
+
 }
+
+
 
 export default PetModel
