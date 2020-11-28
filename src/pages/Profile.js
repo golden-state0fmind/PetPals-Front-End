@@ -5,6 +5,7 @@ import PostBar from "../components/PostBar";
 import PostContainer from "../components/PostContainer";
 // import "../css/profile.css";
 import RelationshipModel from "../models/relationship";
+import ImageModel from "../models/images";
 import PetCardContainer from "../components/PetCardContainer";
 import { Container, Row, Col } from "react-bootstrap";
 // import PostContainer from "../components/PostContainer";
@@ -22,11 +23,6 @@ const Profile = () => {
       setPosts(user.user.posts);
       setUserName(`${user.user.firstName} ${user.user.lastName}`);
       for (let i = 0; i < 4; i++) {
-        if (user.user.images.length >= 1) {
-          console.log(user.user.images);
-
-          setImages((oldArray) => [...oldArray, user.user.images[i]]);
-        }
         if (user.user.pets.length >= 1) {
           setPets((oldArray) => [...oldArray, user.user.pets[i]]);
         }
@@ -36,8 +32,18 @@ const Profile = () => {
     });
   };
 
+  const fetchImages = () => {
+    ImageModel.limit().then((imgData) => {
+      setImages(imgData.images)
+    })
+  }
+
+
   useEffect(() => {
     fetchUser();
+  }, []);
+  useEffect(() => {
+    fetchImages();
   }, []);
   return (
     <Container fluid>

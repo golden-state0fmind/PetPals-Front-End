@@ -15,7 +15,7 @@ const PetCard = (props) => {
       <h4>{props.pet.name}</h4>
       <p>{props.pet.birthdate}</p>
     </div>
-    : <p>Add</p>}
+    : <p></p>}
  
     </>
 

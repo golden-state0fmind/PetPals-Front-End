@@ -4,6 +4,7 @@ import Images from '../components/Images'
 import PetCardContainer from "../components/PetCardContainer";
 import PostBar from "../components/PostBar";
 import PostContainer from "../components/PostContainer";
+import ImageModel from "../models/images";
 import { Container, Row, Col } from "react-bootstrap";
 import {Link} from 'react-router-dom'
 
@@ -27,17 +28,27 @@ const PalsProfile = (props) => {
             console.log(user)
             setUserName(user.user.firstName)
             for (let i = 0; i < 4; i++) {
-              if(user.user.images.length>=1){
-                setImages((oldArray) => [...oldArray, user.user.images[i]]);
+    
+              if(user.user.pets.length >= 1){
+                console.log('--------',user.user.pets.length)
+                setPets((oldArray) => [...oldArray, user.user.pets[i]]);
 
               }
-                if(user.user.pets>=1){
-                    setPets((oldArray) => [...oldArray, user.user.pets[i]]);
-                }
+              
+                
               }
 
         })
     }
+
+    const fetchImages = () => {
+      ImageModel.limit().then((imgData) => {
+        setImages(imgData.images)
+      })
+    }
+
+    useEffect(()=>{fetchImages()}, [])
+  
 
     const handleSubmit = (e) => {
       e.preventDefault()
