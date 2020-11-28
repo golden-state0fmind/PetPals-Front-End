@@ -4,7 +4,7 @@ import ImageModel from '../models/images'
 import ImageUploadBar from '../components/ImageUploadBar'
 
 const UploadPhotos = (props) => {
-    const [userId, setUserId] = useState(localStorage.getItem('id'))
+    const [userId] = useState(localStorage.getItem('id'))
     const [imgUrl, setImgUrl] = useState()
 
     const handleSubmit = (e) => {
