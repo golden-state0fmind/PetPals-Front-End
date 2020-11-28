@@ -61,4 +61,51 @@
     border: 2px solid black;
     margin: 100px 0;
 }
+/* PROFILE PIC AND NAME DISPLAY */
+.nameDisplay {
+    font-family: 'Righteous', cursive;
+    font-size: 1rem;
+    color: #F2762E;
+    text-shadow: 1px 1px 1px black;
+}
 
+.profilePicContainer{
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.addProfilePic {
+    height: 175px;
+    width: 175px;
+    border: solid 5px;
+    border-color: #F2D338;
+    border-radius: 50%;
+    text-align:center;
+    display: flex;
+    align-items: center;
+    padding: 5%;
+}
+
+.addProfilePicText {
+    align-self: center;
+}
+
+.profilePic {
+    height: 175px;
+    width: 175px;
+    border: solid 5px;
+    border-color: #F2D338;
+    border-radius: 50%;
+}
+
+.profile-preview-img{
+    width:50px;
+    height: 50px;
+}
+
+.profile-preview-container{
+    display: flex;
+}
