@@ -40,7 +40,15 @@ const Profile = () => {
             setPets((oldArray) => [...oldArray, user.user.pets[i]]);
           }
         }
-      } else { setPets(user.user.pets) }
+      } else { 
+        let petDisplay = user.user.pets
+        let fillersNeeded = 4 - user.user.pets.length
+        let placeholder = {"imgUrl": "https://res.cloudinary.com/petpals/image/upload/v1606603639/bgz6ubtlg5vm1yvkoe9t.png"}
+        for (let i = 0; i < fillersNeeded; i++ ) {
+          petDisplay.push(placeholder)
+        }
+        setPets(petDisplay) 
+      }
 
       if (user.user.images.length > 4) {
         for (let i = 0; i < 4; i++) {
@@ -48,7 +56,15 @@ const Profile = () => {
             setImages((oldArray) => [...oldArray, user.user.images[i]]);
           }
         }
-      } else { setImages(user.user.images) }
+      } else { 
+      let imageDisplay = user.user.images
+      let fillersNeeded = 4 - user.user.images.length
+      let placeholder = {"imgUrl": "https://res.cloudinary.com/petpals/image/upload/v1606603639/bgz6ubtlg5vm1yvkoe9t.png"}
+      for (let i = 0; i < fillersNeeded; i++ ) {
+        imageDisplay.push(placeholder)
+      }
+      setImages(imageDisplay) 
+    }
 
     })
   }
@@ -84,9 +100,9 @@ return (
         </Col>
 
         <Col sm={4} className="profile-header">
-          <PetCardContainer pets={pets} />
+          {/* <PetCardContainer pets={pets} /> */}
           <div className="pet-card-btns-container">
-            {/* <Images imgClass="profile-preview-img" divClass="profile-preview-container" images={pets}/> */}
+            <Images imgClass="profile-preview-img" divClass="profile-preview-container" images={pets}/>
             <Link className="pets-btn" to="/allpets">
 
               See All Pets
