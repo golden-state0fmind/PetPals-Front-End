@@ -1,14 +1,29 @@
 /* Posts */
+.post-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .post-container{
     border: 2px solid black;
     border-radius: 5px;
     margin: 5% 3%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .post-img {
     width: 100%;
 }
+
+/* .post-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+} */
 
 .post-content{
     font-family: 'Neucha', cursive;

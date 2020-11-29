@@ -15,7 +15,14 @@ const Home = (props) => {
 
   const fetchImages=() => {
     ImageModel.all().then((imgData)=>{
-      setImages(imgData.images)
+      const imageDeck = imgData.images
+      for (let i = 0; i < imageDeck.length; i++) {                                       //SHUFFLES THE ARRAY
+        let j = Math.floor(Math.random() * imageDeck.length);  
+        let temp = imageDeck[i]; 
+        imageDeck[i] = imageDeck[j];
+        imageDeck[j] = temp;   
+      }
+      setImages(imageDeck)
     })
   }
 
@@ -41,14 +48,11 @@ const Home = (props) => {
             imgClass="home-preview-img"
             divClass="home-preview-container"
           />
-          {/* <Link to={"/uploadphotos"}>
-            <button>Upload Photos</button>
-          </Link> */}
         </Col>
       </Row>
       <Row>
         <Col>
-          <PostBar />
+        <h1 className="h-post-heading">Take a look at some posts:</h1>
           {posts.length ? <PostContainer posts={posts} /> : "Loading!"}
         </Col>
       </Row>

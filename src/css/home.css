@@ -1,7 +1,27 @@
 .h-heading {
     text-align: center;
     font-family: 'Neucha', cursive;
-    margin: 5% 0%;
+    margin: 2.5% 0%;
+}
+
+.h-post-heading {
+    text-align: center;
+    font-family: 'Neucha', cursive;
+    margin: 2.5% 0%;
+}
+
+div.img-container-col{
+    margin: 0;
+    padding: 0;
+}
+
+div.col{
+    margin: 0;
+    padding: 0;
+}
+
+.home-preview-container{
+    display: flex;
 }
 
 .home-preview-img{
