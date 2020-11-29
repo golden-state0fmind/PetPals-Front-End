@@ -4,11 +4,8 @@ import Image from './Image'
 
 
 const Images = (props) => {
-    const [currentUserId, setcurrentUserId] = useState(localStorage.getItem('id'))
-
-    console.log("~~~~~", props.images)
     const images = props.images.map((image, index) => (
-        <Image key={index} imgUrl={image.imgUrl} imgClass={props.imgClass}/>
+        <Image key={index} imgUrl={image.imgUrl} imgClass={props.imgClass} userInfo={props.userInfo} type={props.type} />
     ))
 
     return (

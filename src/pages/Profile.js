@@ -94,6 +94,8 @@ return (
             imgClass="profile-preview-img"
             divClass="profile-preview-container"
             images={images}
+            userInfo={userName}
+            type={"Image"}
           />
           <Link to="/allphotos">See All</Link>
           <Link to={"/uploadphotos"}>Upload Photos</Link>
@@ -102,7 +104,7 @@ return (
         <Col sm={4} className="profile-header">
           {/* <PetCardContainer pets={pets} /> */}
           <div className="pet-card-btns-container">
-            <Images imgClass="profile-preview-img" divClass="profile-preview-container" images={pets}/>
+            <Images imgClass="profile-preview-img" divClass="profile-preview-container" images={pets} userInfo={userName} type={"Pet"}/>
             <Link className="pets-btn" to="/allpets">
 
               See All Pets
