@@ -1,0 +1,49 @@
+.l-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.l-heading {
+  text-align: center;
+  font-family: 'Neucha', cursive;
+  margin: 5% 0%;
+}
+
+.form-wrapper{
+
+}
+
+.form-group{
+  align-self: center;
+  display:  flex;
+  justify-content: space-around;
+}
+
+.l-form {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.l-label{
+  font-family: 'Neucha', cursive;
+  font-size: 20px;
+  margin: 2% 2% 2% 0;
+  color: #F2762E;
+}
+
+.l-input{
+  align-self: flex-end;
+}
+
+.l-button {
+  background-color: #F23030;
+  text-decoration: none;
+  padding: .5% 2% .5% 2%;
+  border-radius: 15px;
+  border: none;
+  color: #FFF;
+  font-family: 'Neucha', cursive;
+  align-self: center;
+}
+
