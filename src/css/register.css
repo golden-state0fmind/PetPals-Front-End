@@ -1,9 +1,9 @@
-.l-body {
+.r-body {
   display: flex;
   flex-direction: column;
 }
 
-.l-heading {
+.r-heading {
   text-align: center;
   font-family: 'Neucha', cursive;
   margin: 5% 0%;
@@ -13,29 +13,33 @@
   align-self: center;
   display:  flex;
   justify-content: space-around;
+  width: 100%
 }
 
-.l-form {
+.r-form {
   align-self: center;
   display: flex;
   flex-direction: column;
+  margin: 0;
 }
 
-.l-label{
+.r-label{
   font-family: 'Neucha', cursive;
   font-size: 20px;
   margin: 2% 2% 2% 0;
   color: #F2762E;
+
 }
 
-.l-input{
+.r-input{
   align-self: flex-end;
+
 }
 
-.l-button {
+.r-button {
   background-color: #F23030;
   text-decoration: none;
-  padding: .5% 2% .5% 2%;
+  padding: 1.5% 2% .5% 2%;
   border-radius: 15px;
   border: none;
   color: #FFF;
