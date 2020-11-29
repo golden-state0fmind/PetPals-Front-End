@@ -19,11 +19,13 @@ const ImageUploadBar = (props) => {
     }
 
     return (
-        <div>
+        <div className="iub-container">
+            <div className="iub-wrapper">
             <input className="iub-input" type="file" onChange={(event) => {
                 setuploadedImage(event.target.files[0], 'file')
             }} />
             <button className="iub-button" onClick={uploadImage} >click to upload</button>
+            </div>
         </div>
     )
 }

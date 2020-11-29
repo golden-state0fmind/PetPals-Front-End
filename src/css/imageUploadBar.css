@@ -1,3 +1,15 @@
+.iub-container{
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  width: auto;
+}
+
+.iub-wrapper{
+  align-self: center;
+}
+
 .iub-input{
   background-color: #25c7d941;
   margin: 2% 0;
