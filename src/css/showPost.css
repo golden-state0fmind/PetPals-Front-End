@@ -1,0 +1,38 @@
+.sp-body{
+  display: flex;
+  flex-direction: column;
+}
+
+.sp-image-container{
+  align-self: center;
+  margin: 5% 0 0 0;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 80%;
+}
+
+.sp-image{
+  width: 100%;
+}
+
+.sp-content{
+  font-family: 'Neucha', cursive;
+  font-size: 18px;
+  margin: 5% 5% 0% 5%;
+}
+
+.sp-button{
+  background-color: rgba(255, 255, 255, 0);
+  border: 0;
+  margin: 1%;
+  align-self: center;
+  font-size: 2rem;
+}
+
+.sp-link:hover{
+  text-decoration: none;
+}
+
+.sp-button-wrapper {
+  text-align: center;
+}

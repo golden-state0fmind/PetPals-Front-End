@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import PostModel from '../models/post'
 import CommentContainer from '../components/CommentContainer'
 import CommentModel from '../models/comment'
+import '../css/showPost.css'
 
 const ShowPost = (props) => {
     const [postUserId, setPostUserId] = useState()
@@ -31,23 +32,20 @@ const ShowPost = (props) => {
             setComments(comments.comments)
         })
     }
-    
-    useEffect(() => { fetchPost() }, [])
-    useEffect(() => {fetchComments()}, [])
-    
-    return (
-        <div>
-            <h3><Link to={`/post/${postId}/show`}>USER ID: {postUserId}</Link></h3>
-            <h3>POST ID: {postId}</h3>
-            <img src={imgUrl} alt="" />
-            <p> {content} </p>
-            <p>{createdAt}</p>
-            <p>{updatedAt}</p>
-            <button><Link to={`/addcomment/${postId}`}>Add Comment</Link></button>
-            {postUserId == userId ?
 
-                <button><Link to={`/post/${postId}/edit`}>Edit Post</Link></button> : ""}
-            {comments.length ? <CommentContainer postId={postId} comments={comments} /> : "Loading!"}
+    useEffect(() => { fetchPost() }, [])
+    useEffect(() => { fetchComments() }, [])
+    const altText = `Post number ${postId}.`
+
+    return (
+        <div className="sp-body">
+            <div className="sp-image-container">{imgUrl !== "" ? <img className="sp-image" src={imgUrl} alt={altText} /> : ""}</div>
+            <p className="sp-content">{content}</p>
+            <div className="sp-button-wrapper">
+                <button className="sp-button"><Link className="sp-link" to={`/addcomment/${postId}`}>💬</Link></button>
+                {postUserId == userId ? <button className="sp-button"><Link className="sp-link" to={`/post/${postId}/edit`}>✍️</Link></button> : ""}
+                {comments.length ? <CommentContainer postId={postId} comments={comments} /> : ""}
+            </div>
         </div>
     )
 }
