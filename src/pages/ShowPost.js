@@ -39,12 +39,15 @@ const ShowPost = (props) => {
 
     return (
         <div className="sp-body">
-            <div className="sp-image-container">{imgUrl !== "" ? <img className="sp-image" src={imgUrl} alt={altText} /> : ""}</div>
-            <p className="sp-content">{content}</p>
-            <div className="sp-button-wrapper">
-                <button className="sp-button"><Link className="sp-link" to={`/addcomment/${postId}`}>💬</Link></button>
-                {postUserId == userId ? <button className="sp-button"><Link className="sp-link" to={`/post/${postId}/edit`}>✍️</Link></button> : ""}
-                {comments.length ? <CommentContainer postId={postId} comments={comments} /> : ""}
+            <div className="sp-post-body">
+                <div className="sp-image-container">{imgUrl !== "" ? <img className="sp-image" src={imgUrl} alt={altText} /> : ""}</div>
+                <p className="sp-content">{content}</p>
+                <div className="sp-button-wrapper">
+                    <button className="sp-button"><Link className="sp-link" to={`/addcomment/${postId}`}>💬</Link></button>
+                    {postUserId == userId ? <button className="sp-button"><Link className="sp-link" to={`/post/${postId}/edit`}>✍️</Link></button> : ""}
+                    <h4 className="font">Comments:</h4>
+                    {comments.length ? <CommentContainer postId={postId} comments={comments} /> : ""}
+                </div>
             </div>
         </div>
     )

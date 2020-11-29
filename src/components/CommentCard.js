@@ -5,12 +5,9 @@ const CommentCard = (props) => {
   const [userId] = useState(localStorage.getItem('id'))
 
   const allComments = props.comments.map((comment, index) => (
-    <div key={index}>
-      <p>{comment.createdAt}</p>
-      <p>{comment.updatedAt}</p>
-      <p>{comment.userId}</p>
-      <p>{comment.content}</p>
-      {userId == comment.userId ? <Link to={`/comment/${comment.id}/edit`}>Edit Comment</Link> : ""}
+    <div className="ec-card" key={index}>
+      <p className="ec-content">{comment.content}</p>
+      <div className="ec-link-wrapper">{userId == comment.userId ? <Link className="ec-emoji" to={`/comment/${comment.id}/edit`}>✍️</Link> : ""}</div>
     </div>
   ))
   return (
