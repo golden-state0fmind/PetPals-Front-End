@@ -1,0 +1,36 @@
+.up-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.up-heading {
+  text-align: center;
+  font-family: 'Neucha', cursive;
+  margin: 5% 0%;
+}
+
+.up-form {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.up-bar{
+  display: flex;
+  justify-content: space-around;
+}
+
+.up-button {
+  background-color: #F23030;
+  text-decoration: none;
+  padding: 2.5% 5% 1% 5%;
+  border-radius: 15px;
+  border: none;
+  color: #FFF;
+  font-family: 'Neucha', cursive;
+  align-self: center;
+}
+

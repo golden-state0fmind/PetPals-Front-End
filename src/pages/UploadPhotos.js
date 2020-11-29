@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import ImageModel from '../models/images'
 import ImageUploadBar from '../components/ImageUploadBar'
+import '../css/uploadPhotos.css'
 
 const UploadPhotos = (props) => {
     const [userId] = useState(localStorage.getItem('id'))
@@ -18,11 +19,11 @@ const UploadPhotos = (props) => {
     }
 
     return (
-        <div>
-        <h1>Upload A Photo</h1>
-            <form onSubmit={handleSubmit}>
-                <ImageUploadBar setImgUrl={setImgUrl}/>
-                <button type="submit">Save</button>
+        <div className="up-body">
+        <h1 className="up-heading">Upload A Photo</h1>
+            <form className="up-form" onSubmit={handleSubmit}>
+                <div class="up-bar"><ImageUploadBar setImgUrl={setImgUrl}/></div>
+                <button class="up-button" type="submit">Save</button>
             </form>
         </div>
     )
