@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { Container, Row, Col } from "react-bootstrap";
 import ImageModel from '../models/images'
 import RelationshipModel from '../models/relationship'
 import '../css/allPhotos.css'
@@ -7,7 +8,7 @@ import '../css/allPhotos.css'
 const AllPhotos = (props) => {
   const [images, setImages] = useState([])
   const [userId] = useState(localStorage.getItem("id"));
-  const [userName, setUserName] = useState(); 
+  const [userName, setUserName] = useState();
 
 
   const fetchUser = () => {
@@ -25,34 +26,38 @@ const AllPhotos = (props) => {
     }, userId).then(data => {
       props.history.push('/profile')
     })
-}
+  }
 
-const handleDelete = (e, id) => {
-  e.preventDefault()
-  ImageModel.delete(id).then(data => {
-    props.history.push('/profile')
-  })
-}
+  const handleDelete = (e, id) => {
+    e.preventDefault()
+    ImageModel.delete(id).then(data => {
+      props.history.push('/profile')
+    })
+  }
 
-useEffect(() => { fetchUser() }, [])
+  useEffect(() => { fetchUser() }, [])
 
-const altTag=`${userName} personal image`
-const allImages = images.map((image, index) => (
-  <div key={index}>
-      <img src={image.imgUrl} alt={altTag} className='aPhotos-image' id={image.id} />
-      <form onSubmit={(e) => handleProfilePic(e, userId, image.imgUrl)}> <button type="submit">Make Profile pic</button></form>
-      <form onSubmit={(e) => handleDelete(e, image.id)}>
-        <button type="submit">Delete</button></form>
-  </div>
-))
+  const altTag = `${userName} personal image`
+  const allImages = images.map((image, index) => (
+    <div className="aPhotos-card" key={index}>
+      <img src={image.imgUrl} alt={altTag} className="aPhotos-image" id={image.id} />
+      <div className="aPhotos-buttonbar">
+        <div><form onSubmit={(e) => handleProfilePic(e, userId, image.imgUrl)}><button type="submit" className="aPhotos-cbutton">👤</button></form></div>
+        <div><form onSubmit={(e) => handleDelete(e, image.id)}><button className="aPhotos-cbutton" type="submit">🗑️</button></form></div>
+      </div>
+    </div>
+  ))
 
-return (
-  <div>
-    <h1>Your Photos</h1>
-    <Link to={'/uploadphotos'}><button>Upload Photos</button></Link>
-    {allImages}
-  </div>
-)
+  return (
+
+    <div className="aPhotos-body">
+      <h1 className="aPhotos-heading">Your Photos</h1>
+      <button className="aPhotos-button"><Link className="aPhotos-link" to={'/uploadphotos'}>Upload Photos</Link></button>
+            <div className="aPhotos-container">
+              {allImages}
+            </div>
+    </div>
+  )
 }
 
 export default AllPhotos

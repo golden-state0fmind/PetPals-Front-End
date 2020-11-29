@@ -64,7 +64,7 @@
     display: flex;
     flex-wrap: wrap;
 }
-
+/* move to pet card css */
 .pet-card-img{
     height: 100px;
     width: 150px;
