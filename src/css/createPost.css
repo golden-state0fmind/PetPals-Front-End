@@ -1,0 +1,28 @@
+.cp-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.cp-heading {
+  text-align: center;
+  font-family: 'Neucha', cursive;
+  margin: 2.5% 0% 2% 0%;
+}
+
+.cp-form {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  width: 80%
+}
+
+.cp-button {
+  background-color: #F23030;
+  text-decoration: none;
+  padding: 1% 2% 0% 2%;
+  border-radius: 15px;
+  border: none;
+  color: #FFF;
+  font-family: 'Neucha', cursive;
+  align-self: center;
+}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PostModel from '../models/post'
 import ImageUploadBar from '../components/ImageUploadBar'
+import '../css/createPost.css'
 
 const CreatePost = (props) => {
 
@@ -20,9 +21,9 @@ const CreatePost = (props) => {
   }
 
   return (
-    <div>
-      <h3>What's on your mind?</h3>
-      <form onSubmit={handleSubmit}>
+    <div className="cp-body">
+      <h3 className="cp-heading">What's on your mind?</h3>
+      <form className="cp-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <textarea
             onChange={(e) => { setContent(e.target.value) }}
@@ -35,7 +36,7 @@ const CreatePost = (props) => {
           />
         </div>
         <ImageUploadBar setImgUrl={setImgUrl} />
-        <button type="submit">Post</button>
+        <button className="cp-button" type="submit">Post</button>
       </form>
     </div>
   );
