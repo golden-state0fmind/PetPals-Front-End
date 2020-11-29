@@ -22,13 +22,6 @@
     width: 100%;
 }
 
-/* .post-details{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-
-} */
-
 .post-content{
     font-family: 'Neucha', cursive;
     font-size: 18px;
