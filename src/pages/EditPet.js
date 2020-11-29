@@ -41,7 +41,6 @@ const EditPet = (props) => {
         <div className="ep-body">
             <h1 className="ep-heading">Edit Pet</h1>
             <form className="ep-form" onSubmit={handleSubmit}>
-                {/* <div className="form-group"> */}
                     <label className="ep-label" htmlFor="name">Name:</label>
                     <input
                         className="ep-input"
@@ -65,7 +64,6 @@ const EditPet = (props) => {
                         name="birthdate"
                         value={birthdate}
                     /><br />
-                {/* </div> */}
                 <div className="ep-button-wrapper">
                     <button className="ep-button" type="submit">✅</button>
                     <form onSubmit={handleDelete}><button className="ep-button" type="submit">🗑️</button></form>

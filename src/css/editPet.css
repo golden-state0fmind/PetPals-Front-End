@@ -14,12 +14,6 @@
   width: 40%;
 }
 
-.form-group{
-  align-self: center;
-  display:  flex;
-  justify-content: space-around;
-}
-
 .ep-label{
   font-family: 'Neucha', cursive;
   font-size: 20px;
