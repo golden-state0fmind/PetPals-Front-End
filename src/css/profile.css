@@ -1,6 +1,55 @@
+/* PROFILE PIC AND NAME DISPLAY */
+.nameDisplay {
+    font-family: 'Righteous', cursive;
+    font-size: 1rem;
+    color: #F2762E;
+    text-shadow: 1px 1px 1px black;
+}
+
+.profilePicContainer{
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.addProfilePic {
+    /* height: 175px;
+    width: 175px; */
+    border: solid 5px;
+    border-color: #F2D338;
+    border-radius: 50%;
+    text-align:center;
+    display: flex;
+    align-items: center;
+    padding: 5%;
+}
+
+.addProfilePicText {
+    align-self: center;
+}
+
+.profilePic {
+    height: 35%;
+    width: 35%;
+    border: solid 5px;
+    border-color: #F2D338;
+    border-radius: 50%;
+}
+
+/* Image and Pet Containers */
+
 .profile-preview-img{
-    width:100px;
-    height: 100px
+    width: 115px;
+    height: 115px;
+}
+;
+.img-wrapper{
+    display: flex;
+    justify-content: space-around;
+    margin: 0px;
+    padding: 0px;
 }
 
 .profile-preview-container{
@@ -60,43 +109,4 @@
 .friends-container{
     border: 2px solid black;
     margin: 100px 0;
-}
-/* PROFILE PIC AND NAME DISPLAY */
-.nameDisplay {
-    font-family: 'Righteous', cursive;
-    font-size: 1rem;
-    color: #F2762E;
-    text-shadow: 1px 1px 1px black;
-}
-
-.profilePicContainer{
-    display: flex;
-    justify-content: space-around; 
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-}
-
-.addProfilePic {
-    height: 175px;
-    width: 175px;
-    border: solid 5px;
-    border-color: #F2D338;
-    border-radius: 50%;
-    text-align:center;
-    display: flex;
-    align-items: center;
-    padding: 5%;
-}
-
-.addProfilePicText {
-    align-self: center;
-}
-
-.profilePic {
-    height: 175px;
-    width: 175px;
-    border: solid 5px;
-    border-color: #F2D338;
-    border-radius: 50%;
 }
