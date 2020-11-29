@@ -12,14 +12,6 @@ import ImageModel from "../models/images"
 const Home = (props) => {
   const [images, setImages] = useState([]);
   const [posts, setPosts] = useState([]);
-  // const [userId] = useState(localStorage.getItem("id"));
-
-  // const fetchUser = () => {
-  //   RelationshipModel.one(userId).then((user) => {
-  //     setImages(user.user.images);
-  //     console.log(user.user);
-  //   });
-  // };
 
   const fetchImages=() => {
     ImageModel.all().then((imgData)=>{
@@ -37,9 +29,7 @@ const Home = (props) => {
   useEffect(() => {
     fetchPosts();
   }, []);
-  // useEffect(() => {
-  //   fetchUser();
-  // }, []);
+
 
   return (
     <Container>
