@@ -24,9 +24,10 @@ const AddPet = (props) => {
 
     return (
         <div>
+            <h1>Add a Pet</h1>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                <label htmlFor="name">Name:</label>
+                    <label htmlFor="name">Name:</label>
                     <input
                         onChange={(e) => { setName(e.target.value) }}
                         rows="5"

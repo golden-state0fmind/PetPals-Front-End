@@ -38,6 +38,7 @@ const EditPet = (props) => {
 
     return (
         <div>
+            <h1>Edit Pet</h1>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="name">Name:</label>

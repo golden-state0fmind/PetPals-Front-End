@@ -19,7 +19,7 @@ const AddComment = (props) => {
 
     return (
         <div>
-            Add Comment
+            <h1>Add Comment</h1>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <textarea

@@ -38,6 +38,7 @@ const EditPost = (props) => {
 
     return (
         <div>
+            <h1>Edit Post</h1>
             <img src={imgUrl} alt="This is your post image" />
             <form onSubmit={handleSubmit}>
                 <div className="form-group">

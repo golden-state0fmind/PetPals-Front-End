@@ -19,7 +19,7 @@ const UploadPhotos = (props) => {
 
     return (
         <div>
-        <h1>Upload A Photo:</h1>
+        <h1>Upload A Photo</h1>
             <form onSubmit={handleSubmit}>
                 <ImageUploadBar setImgUrl={setImgUrl}/>
                 <button type="submit">Save</button>
