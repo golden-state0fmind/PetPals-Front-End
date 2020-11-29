@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import CommentModel from '../models/comment'
-import { Button } from 'react-bootstrap';
+import '../css/editComment.css'
+
 
 const EditComment = (props) => {
     const [userId] = useState(localStorage.getItem('id'))
@@ -32,9 +33,9 @@ const EditComment = (props) => {
     useEffect(() => { fetchComment() }, [])
 
     return (
-        <div>
-            Edit Comment
-            <form onSubmit={handleSubmit}>
+        <div className="ec-body">
+            <h1 className="ec-heading">Edit Comment</h1>
+            <form className="ec-form" onSubmit={handleSubmit}>
                 <div className="form-group">
                     <textarea
                         onChange={(e) => { setContent(e.target.value) }}
@@ -46,8 +47,10 @@ const EditComment = (props) => {
                         value={content}
                     />
                 </div>
-                <Button type="submit">Update Comment</Button>
-                <form onSubmit={handleDelete}><button type="submit">Delete Comment</button></form>
+                <div className="ec-button-wrapper">
+                    <button className="ec-button" type="submit">✅</button>
+                    <form onSubmit={handleDelete}><button className="ec-button" type="submit">🗑️</button></form>
+                </div>
             </form>
         </div>
     )
