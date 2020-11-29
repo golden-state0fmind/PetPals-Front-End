@@ -43,7 +43,7 @@ const Home = (props) => {
 
   return (
     <Container>
-      <h1>Welcome all Pet Owners</h1>
+      <h1 className="h-heading">Welcome all Pet Owners</h1>
       <Row>
         <Col className="img-container">
           <Images

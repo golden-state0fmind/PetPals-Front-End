@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import ImageUploadBar from '../components/ImageUploadBar'
 import PetModel from '../models/pet'
+import '../css/addPet.css'
 
 const AddPet = (props) => {
     const [name, setName] = useState('')
@@ -23,12 +24,13 @@ const AddPet = (props) => {
     }
 
     return (
-        <div>
-            <h1>Add a Pet</h1>
-            <form onSubmit={handleSubmit}>
+        <div className="ap-body">
+            <h1 className="ap-heading">Add a Pet</h1>
+            <form className="ap-form" onSubmit={handleSubmit}>
                 <div className="form-group">
-                    <label htmlFor="name">Name:</label>
+                    <label className="ap-label" htmlFor="name">Name: </label>
                     <input
+                        className="ap-input"
                         onChange={(e) => { setName(e.target.value) }}
                         rows="5"
                         cols="40"
@@ -38,8 +40,9 @@ const AddPet = (props) => {
                         placeholder="(e.g. George)"
                         value={name}
                     /><br />
-                    <label htmlFor="species">Species:</label>
+                    <label className="ap-label" htmlFor="species">Species: </label>
                     <input
+                        className="ap-input"
                         onChange={(e) => { setSpecies(e.target.value) }}
                         rows="5"
                         cols="40"
@@ -49,8 +52,9 @@ const AddPet = (props) => {
                         placeholder="(e.g. Bat)"
                         value={species}
                     /><br />
-                    <label htmlFor="birthdate">Birthdate:</label>
+                    <label className="ap-label" htmlFor="birthdate">Birthdate: </label>
                     <input
+                        className="ap-input"
                         onChange={(e) => { setBirthdate(e.target.value) }}
                         rows="5"
                         cols="40"
@@ -60,9 +64,9 @@ const AddPet = (props) => {
                         value={birthdate}
                     /><br />
                 </div>
-                <p>Upload an Image:</p>
+                <p className="ap-label">Upload an Image:</p>
                 <ImageUploadBar setImgUrl={setImgUrl} />
-                <button type="submit">Add Pet</button>
+                <button className="ap-button" type="submit">Add Pet</button>
             </form>
         </div>
     )

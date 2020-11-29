@@ -1,0 +1,40 @@
+.ap-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.ap-heading {
+  text-align: center;
+  font-family: 'Neucha', cursive;
+  margin: 5% 0%;
+}
+
+.ap-form {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  width: 80%
+}
+
+.ap-label{
+  font-family: 'Neucha', cursive;
+  font-size: 20px;
+  margin: 2% 2% 2% 0;
+  color: #F2762E;
+}
+
+.ap-input{
+  align-self: flex-end;
+}
+
+.ap-button {
+  background-color: #F23030;
+  text-decoration: none;
+  padding: 2.5% 1% 1% 1%;
+  border-radius: 15px;
+  border: none;
+  color: #FFF;
+  font-family: 'Neucha', cursive;
+  align-self: center;
+}
+

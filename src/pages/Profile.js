@@ -78,7 +78,7 @@ useEffect(() => {
 }, []);
 
 return (
-  <>
+  <div className="p-body">
     <div className="nameDisplay"><h1>{firstName} {lastName}</h1></div>
     <div className="profilePicContainer">
       {profilePic !== "" ?
@@ -124,7 +124,7 @@ return (
         )}
 
     </Container>
-  </>
+  </div>
 );
 };
 

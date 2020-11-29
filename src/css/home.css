@@ -1,3 +1,9 @@
+.h-heading {
+    text-align: center;
+    font-family: 'Neucha', cursive;
+    margin: 5% 0%;
+}
+
 .home-preview-img{
     height: 100px;
     width: 100px;

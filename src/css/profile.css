@@ -1,9 +1,16 @@
+.p-body {
+   display: flex;
+   flex-direction: column;
+   justify-content: center; 
+}
+
 /* PROFILE PIC AND NAME DISPLAY */
 .nameDisplay {
     font-family: 'Righteous', cursive;
     font-size: 1rem;
     color: #F2762E;
     text-shadow: 1px 1px 1px black;
+    text-align: center;
 }
 
 .profilePicContainer{
