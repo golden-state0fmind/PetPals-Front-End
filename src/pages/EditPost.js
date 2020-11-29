@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import PostModel from '../models/post'
+import '../css/editPost.css'
 
 const EditPost = (props) => {
     const [postId] = useState(props.match.params.id)
@@ -37,18 +38,24 @@ const EditPost = (props) => {
     }
 
     return (
-        <div>
-            <h1>Edit Post</h1>
-            <img src={imgUrl} alt="This is your post image" />
-            <form onSubmit={handleSubmit}>
+        <div className="ePost-body">
+            <h1 className="ePost-heading">Edit Post</h1>
+            {imgUrl !== "" ? <img className="ec-image" src={imgUrl} alt="This is your post image" /> : ""}
+            <form className="ePost-form" onSubmit={handleSubmit}>
                 <div className="form-group">
+                    <label className="ePost-label">Image URL:</label>
                     <input
+                        className="ePost-input"
                         onChange={(e) => { setImgUrl(e.target.value) }}
                         type="text"
                         name="imgUrl"
+                        placeholder="insert image url..."
                         value={imgUrl}
-                    />
+                    /><br />
+                </div>
+                <div className="form-group">
                     <textarea
+                        className="ePost-input"
                         onChange={(e) => { setContent(e.target.value) }}
                         rows="5"
                         cols="40"
@@ -58,9 +65,12 @@ const EditPost = (props) => {
                         value={content}
                     />
                 </div>
-                <button type="submit">Save Changes</button>
+                <div className="ec-button-warpper"></div>
+                <button className="ePost-button" type="submit">Save Changes</button>
             </form>
-            <form onSubmit={handleDelete}><button type="submit">Delete Post</button></form>
+            <div className="ec-delete-container">
+            <form onSubmit={handleDelete}><button className="ePost-button" type="submit">Delete Post</button></form>
+            </div>
         </div>
     )
 }
