@@ -24,7 +24,7 @@ const EditPost = (props) => {
             content,
             userId,
         }, postId).then(data => {
-            props.history.push('/')
+            props.history.push('/profile')
         })
     }
 
@@ -32,7 +32,7 @@ const EditPost = (props) => {
     const handleDelete = (e) => {
         e.preventDefault()
         PostModel.delete(postId).then(data => {
-            props.history.push('/')
+            props.history.push('/profile')
         })
     }
 

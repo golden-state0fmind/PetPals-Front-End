@@ -15,7 +15,7 @@ const CreatePost = (props) => {
       imgUrl,
       userId,
     }).then(data => {
-      props.history.push('/')
+      props.history.push('/profile')
     })
   }
 
