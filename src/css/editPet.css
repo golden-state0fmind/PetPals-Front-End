@@ -1,0 +1,45 @@
+.ep-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.ep-heading {
+  text-align: center;
+  font-family: 'Neucha', cursive;
+  margin: 2.5% 0% 2% 0%;
+}
+
+.ep-form {
+  align-self: center;
+  width: 40%;
+}
+
+.form-group{
+  align-self: center;
+  display:  flex;
+  justify-content: space-around;
+}
+
+.ep-label{
+  font-family: 'Neucha', cursive;
+  font-size: 20px;
+  margin: 2% 2% 2% 0;
+  color: #F2762E;
+}
+
+.ep-input{
+  align-self: flex-end;
+}
+
+.ep-button-wrapper{
+  display: flex;
+  justify-content: center;
+  margin: 5%;
+}
+
+.ep-button {
+  background-color: rgba(255, 255, 255, 0);
+  text-decoration: none;
+  border: none;
+  font-size: 1.5rem;
+}
