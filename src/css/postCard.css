@@ -1,16 +1,32 @@
+/* Posts */
+
 .post-container{
     border: 2px solid black;
+    border-radius: 5px;
+    margin: 5% 3%;
 }
 
-.post-title{
-    text-align: left;
-    margin-left: 28px
+.post-img {
+    width: 100%;
 }
 
-.button-wrapper{
-    text-align: end;
+.post-content{
+    font-family: 'Neucha', cursive;
+    font-size: 18px;
+    margin: 0;
+    padding: 1%;
 }
 
-.post-bar{
-    text-align: end;
+.post-button-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    background-color:#248ea69e;
+    padding: 0% 2%;
 }
+
+.post-button {
+    padding: 1% 2%;
+}
+
+
+

@@ -9,14 +9,12 @@ const PostCard = (props) => {
     const posts = props.posts.map((post, index) => (
         <div key={index} className="post-container">
             {post.imgUrl !== "" ? <img className="post-img" src={post.imgUrl} alt={altTag} /> : ""}
-            
-            <p>{post.content} </p>
-            <p>{post.createdAt}</p>
-            <div className="button-wrapper">
-            <button><Link to={`/post/${post.id}/show`}>View Post</Link></button>
-            <button><Link to={`/addcomment/${post.id}`}>Add Comment</Link></button>
+            <p className="post-content">{post.content} </p>
+            <div className="post-button-wrapper">
+            <div className="post-button"><Link to={`/post/${post.id}/show`}>👀</Link></div>
+            <div className="post-button"><Link to={`/addcomment/${post.id}`}>💬</Link></div>
             {post.userId === userId ? 
-            <button><Link to={`/post/${post.id}/edit`}>Edit Post</Link></button> : "" }
+            <><div className="post-button"><Link to={`/post/${post.id}/edit`}>✍️</Link></div></> : "" }
             </div>
         </div>
     ))

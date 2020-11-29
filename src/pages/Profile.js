@@ -110,11 +110,11 @@ return (
         </Col>
       </Row>
 
-      <Row>
+      {/* <Row>
         <Col className="friends-container">
           <Friends />
         </Col>
-      </Row>
+      </Row> */}
 
       {posts.length ? (
         <PostContainer user={userName} posts={posts} />
