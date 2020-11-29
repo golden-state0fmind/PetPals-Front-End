@@ -38,7 +38,7 @@ class Register extends Component {
                 <h4 className="r-heading">Register</h4>
                 <form className="r-form" onSubmit={this.handleSubmit}>
                     <div className="form-group">
-                        <label className="r-label" htmlFor="firstName">First Name</label><br/>
+                        <label className="r-label" htmlFor="firstName">First Name</label><br />
                         <input className="r-input"
                             onChange={this.handleChange}
                             type="text"
