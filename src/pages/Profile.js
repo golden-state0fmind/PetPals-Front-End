@@ -16,7 +16,7 @@ const Profile = () => {
   const [firstName, setFirstName] = useState()
   const [lastName, setLastName] = useState()
   const [birthdate, setBirthDate] = useState()
-  const [profilePic, setProfilePic] = useState('')
+  const [profilePic, setProfilePic] = useState("")
   const [posts, setPosts] = useState([]);
   const [images, setImages] = useState([]);
   const [pets, setPets] = useState([]);
@@ -81,9 +81,9 @@ return (
   <div className="p-body">
     <div className="nameDisplay"><h1>{firstName} {lastName}</h1></div>
     <div className="profilePicContainer">
-      {profilePic !== "" ?
+      {profilePic !== null ?
         <img className="profilePic" src={profilePic} alt="Profile Picture" />
-        : <div className="addProfilePic"><Link className="addProfilePicText" to="/allphotos">Add a Profile Pic from your Photos</Link></div>}
+        : <><div className="addProfilePic"><Link className="addProfilePicText" to="/allphotos">Add a Profile Pic from your Photos</Link></div></> }
     </div>
     <PostBar />
 
