@@ -1,5 +1,27 @@
+.ai-body {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.ai-content{
+  align-self: center
+}
+
 .ai-heading {
   text-align: center;
   font-family: 'Neucha', cursive;
   margin: 5% 0%;
 }
+
+.ai-detail {
+  margin: 0 5% 0 5%;
+  width: 100%;
+  font-family: 'Neucha', cursive;
+}
+
+.bold {
+  font-weight: bold;
+  color: #F2762E;
+}
+
