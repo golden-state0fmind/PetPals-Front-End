@@ -102,17 +102,10 @@ return (
         </Col>
 
         <Col sm={4} className="profile-header">
-          {/* <PetCardContainer pets={pets} /> */}
           <div className="pet-card-btns-container">
             <Images imgClass="profile-preview-img" divClass="profile-preview-container" images={pets} userInfo={userName} type={"Pet"}/>
-            <Link className="pets-btn" to="/allpets">
-
-              See All Pets
-              </Link>
-            <Link className="pets-btn" to="/addpet">
-
-              Add A Pet
-              </Link>
+            <Link className="pets-btn" to="/allpets">See All Pets</Link>
+            <Link className="pets-btn" to="/addpet">Add A Pet</Link>
           </div>
         </Col>
       </Row>
