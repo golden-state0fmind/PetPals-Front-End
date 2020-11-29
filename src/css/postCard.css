@@ -2,12 +2,14 @@
 .post-wrapper{
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
 }
 
 .post-container{
     border: 2px solid black;
     border-radius: 5px;
-    margin: 5% 3%;
+    margin: 2% 3% 2% 3%;
     max-width: 500px;
     display: flex;
     flex-direction: column;
