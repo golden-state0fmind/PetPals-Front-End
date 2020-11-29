@@ -12,8 +12,8 @@ const Header = (props) => {
     <header className="navbar">
         <ul>
 
-          <li><Link to={'/'}><span classNam="home-emoji">🏠</span></Link> </li>
-          <li><SearchBar /></li>
+          <li><Link to={'/'}><span className="home-emoji">🏠</span></Link> </li>
+          <li className="li-search"><SearchBar /></li>
 
         </ul>
 
