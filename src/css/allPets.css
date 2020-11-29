@@ -1,0 +1,36 @@
+.allp-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.allp-heading {
+  text-align: center;
+  font-family: 'Neucha', cursive;
+  margin: 2% 0%;
+}
+
+.allp-button {
+  /* background-color: #F23030; */
+  text-decoration: none;
+  padding: .5% 1% 0% 1%;
+  border-radius: 15px;
+  border: 1px solid black;
+  color: black;
+  font-family: 'Neucha', cursive;
+  align-self: center;
+  margin: 0 0 5% 0;
+  background-color: #f2762e82;
+}
+
+.allp-button:hover {
+    background-color: #f230305f;
+}
+
+a.allp-link{
+  text-decoration: none;
+  color: black;
+}
+
+a.allp-link:hover {
+  color:white;
+}
