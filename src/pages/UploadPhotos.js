@@ -13,12 +13,13 @@ const UploadPhotos = (props) => {
             imgUrl,
             userId,
         }).then(data => {
-            props.history.push('/')
+            props.history.push('/allphotos')
         })
     }
 
     return (
         <div>
+        <h1>Upload A Photo:</h1>
             <form onSubmit={handleSubmit}>
                 <ImageUploadBar setImgUrl={setImgUrl}/>
                 <button type="submit">Save</button>
