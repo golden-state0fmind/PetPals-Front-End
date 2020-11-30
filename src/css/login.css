@@ -12,7 +12,7 @@
 .form-group{
   align-self: center;
   display:  flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .l-form {
@@ -21,11 +21,11 @@
   flex-direction: column;
 }
 
-.l-label{
+label.l-label{
   font-family: 'Neucha', cursive;
   font-size: 20px;
-  margin: 2% 2% 2% 0;
   color: #F2762E;
+  margin: 0 2% 0 0;
 }
 
 .l-input{
