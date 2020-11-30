@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import RelationshipModel from "../models/relationship"
 import Results from "../components/Results"
+import "../css/results.css"
 
 const SearchResults = (props) => {
     
@@ -16,10 +17,10 @@ const SearchResults = (props) => {
 
     useEffect(()=>{fetchUsers()},[])
 
-
     return (
-        <div>
-            <Results users={users}/>
+        <div className="r-container">
+        <h1 className="r-heading">Results</h1>
+            <div className="result-container"><Results users={users}/></div>
         </div>
     );
 }
