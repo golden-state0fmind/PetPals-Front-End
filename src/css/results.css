@@ -1,0 +1,27 @@
+.r-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+
+.r-heading{
+  text-align: center;
+  font-family: 'Neucha', cursive;
+  margin: 5% 0%;
+  color: #F2762E
+}
+
+.result-container{
+  text-align: center;
+  font-family: 'Neucha', cursive;
+}
+
+.result-link{
+  text-decoration: none;
+  color: #248EA6;
+}
+
+.result-link:hover{
+  text-decoration: none;
+  color: #F2D338;
+}
