@@ -34,7 +34,7 @@
 .ePost-label{
   font-family: 'Neucha', cursive;
   font-size: 20px;
-  margin: 0;
+  margin: 0 5px 0 0;
   color: #F2762E;
 }
 
@@ -48,10 +48,23 @@
   margin: 5%;
 }
 
-.ePost-button {
+.ePost-save-button {
   background-color: #F23030;
   text-decoration: none;
-  padding: 2.5% 5% 1% 5%;
+  padding: 4px 0 0 0;
+  margin: 1%;
+  width: 125px;
+  border-radius: 15px;
+  border: none;
+  color: #FFF;
+  font-family: 'Neucha', cursive;
+  align-self: center;
+}
+
+.ePost-delete-button {
+  background-color: #F23030;
+  text-decoration: none;
+  padding: 4px 0 0 0;
   margin: 1%;
   width: 125px;
   border-radius: 15px;

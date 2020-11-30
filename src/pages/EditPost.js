@@ -66,10 +66,10 @@ const EditPost = (props) => {
                     />
                 </div>
                 <div className="ec-button-warpper"></div>
-                <button className="ePost-button" type="submit">Save Changes</button>
+                <button className="ePost-save-button" type="submit">Save Changes</button>
             </form>
             <div className="ec-delete-container">
-            <form onSubmit={handleDelete}><button className="ePost-button" type="submit">Delete Post</button></form>
+            <form onSubmit={handleDelete}><button className="ePost-delete-button" type="submit">Delete Post</button></form>
             </div>
         </div>
     )
