@@ -97,15 +97,15 @@ return (
             userInfo={userName}
             type={"Image"}
           />
-          <Link to="/allphotos">See All</Link>
-          <Link to={"/uploadphotos"}>Upload Photos</Link>
+          <Link className="content-link" to="/allphotos">Open Photo Album</Link>
+          <Link className="content-link" to={"/uploadphotos"}>Upload Photos</Link>
         </Col>
 
         <Col sm={4} className="profile-header">
           <div className="pet-card-btns-container">
             <Images imgClass="profile-preview-img" divClass="profile-preview-container" images={pets} userInfo={userName} type={"Pet"}/>
-            <Link className="pets-btn" to="/allpets">See All Pets</Link>
-            <Link className="pets-btn" to="/addpet">Add A Pet</Link>
+            <Link className="content-link" to="/allpets">See All Pets</Link><br/>
+            <Link className="content-link" to="/addpet">Add A Pet</Link>
           </div>
         </Col>
       </Row>
