@@ -1,0 +1,43 @@
+.pet-card{
+  margin: 2.5%;
+  background-color: rgba(0, 0, 0, 0.776);
+  border-radius: 5px;
+}
+
+.pet-card-img{
+  height: 150px;
+  width: 150px;
+  border: 1px solid black;
+  border-radius: 5px 5px 0 0;
+}
+
+.pet-info{
+  border: 1px solid black;
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pet-text {
+  font-family: 'Neucha', cursive;
+  padding: 2%;
+  color:white;
+}
+
+.name{
+  color: #25C7D9;
+  margin: 0;
+}
+
+.birthdate{
+  font-size: 14px;;
+}
+
+.emphasis{
+  font-weight: bold;
+  color: #f23030c8;
+}
+
+.edit-pet{
+  margin: 5%;
+}

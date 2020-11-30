@@ -1,0 +1,34 @@
+/* BUTTON CSS */
+
+.align-statusbar{
+  width:80%;
+}
+
+.fake-statusbar-container{
+  display: flex;
+  justify-content: space-around;
+}
+
+.fake-statusbar{
+  background-color: #FFF;
+  border: 1px solid grey;
+  border-radius: 15px ;
+  margin: 2%;
+  padding: 0 2%;
+  width: 60%;
+  max-width: 350px;
+  min-width: 150px;
+  text-align: left;
+}
+
+.fake-statustext{
+  color: grey;
+  align-self: flex-end;
+  font-family: 'Neucha', cursive;
+  /* font-size: 18px; */
+}
+
+.fake-statustext:hover {
+  text-decoration: none;
+  color: grey;
+}

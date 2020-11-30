@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import UserModel from '../models/user'
+import '../css/register.css'
 
 class Register extends Component {
     state = {
@@ -33,12 +34,12 @@ class Register extends Component {
     }
     render() {
         return (
-            <div>
-                <h4>Register</h4>
-                <form onSubmit={this.handleSubmit}>
+            <div className="r-body">
+                <h4 className="r-heading">Register</h4>
+                <form className="r-form" onSubmit={this.handleSubmit}>
                     <div className="form-group">
-                        <label htmlFor="firstName">First Name</label>
-                        <input
+                        <label className="r-label" htmlFor="firstName">First Name</label><br />
+                        <input className="r-input"
                             onChange={this.handleChange}
                             type="text"
                             id="firstName"
@@ -47,8 +48,8 @@ class Register extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="lastName">Last Name</label>
-                        <input
+                        <label className="r-label" htmlFor="lastName">Last Name</label>
+                        <input className="r-input"
                             onChange={this.handleChange}
                             type="text"
                             id="lastName"
@@ -57,8 +58,8 @@ class Register extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="birthdate">Birthdate</label>
-                        <input
+                        <label className="r-label" htmlFor="birthdate">Birthdate</label>
+                        <input className="r-input"
                             onChange={this.handleChange}
                             type="date"
                             id="birthdate"
@@ -67,8 +68,8 @@ class Register extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="name">Email</label>
-                        <input
+                        <label className="r-label" htmlFor="name">Email</label>
+                        <input className="r-input"
                             onChange={this.handleChange}
                             type="email"
                             id="email"
@@ -76,8 +77,8 @@ class Register extends Component {
                             value={this.state.email} />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="name">Password</label>
-                        <input
+                        <label className="r-label" htmlFor="name">Password</label>
+                        <input className="r-input"
                             onChange={this.handleChange}
                             type="password"
                             id="password"
@@ -85,15 +86,15 @@ class Register extends Component {
                             value={this.state.password} />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="password2">Confirm Password</label>
-                        <input
+                        <label className="r-label" htmlFor="password2">Confirm Password</label>
+                        <input className="r-input"
                             onChange={this.handleChange}
                             type="password"
                             id="password2"
                             name="password2"
                             value={this.state.password2} />
                     </div>
-                    <button type="submit">Register</button>
+                    <button className="r-button" type="submit">Register</button>
                 </form>
             </div>
         );

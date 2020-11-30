@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import UserModel from '../models/user'
+import '../css/login.css'
+
 class Login extends Component {
     state = {
         email: '',
@@ -19,7 +21,7 @@ class Login extends Component {
                 if (!data.user) {
                     return false
                 }
-                //strored user is defined in the app component and passed to login
+                //stored user is defined in the app component and passed to login
                 console.log(data)
                 this.props.storeUser(data.user)
                 //redirect the user to their profile
@@ -29,29 +31,33 @@ class Login extends Component {
     }
     render() {
         return (
-            <div>
-                <h4>Login</h4>
-                <form onSubmit={this.handleSubmit}>
-                    <div className="form-group">
-                        <label htmlFor="name">Email</label>
-                        <input
-                            onChange={this.handleChange}
-                            type="email"
-                            id="email"
-                            name="email"
-                            value={this.state.email} />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="password">Password</label>
-                        <input
-                            onChange={this.handleChange}
-                            type="password"
-                            id="password"
-                            name="password"
-                            value={this.state.password} />
-                    </div>
-                    <button type="submit">Login</button>
-                </form>
+            <div className="l-body">
+                <h4 className="l-heading">Login</h4>
+                <div className="form-wrapper">
+                    <form className="l-form" onSubmit={this.handleSubmit}>
+                        <div className="form-group">
+                            <label className="l-label" htmlFor="name">Email</label>
+                            <input
+                                className="l-input"
+                                onChange={this.handleChange}
+                                type="email"
+                                id="email"
+                                name="email"
+                                value={this.state.email} />
+                        </div>
+                        <div className="form-group">
+                            <label className="l-label" htmlFor="password">Password</label>
+                            <input
+                                className="l-input"
+                                onChange={this.handleChange}
+                                type="password"
+                                id="password"
+                                name="password"
+                                value={this.state.password} />
+                        </div>
+                        <button className="l-button" type="submit">Login</button>
+                    </form>
+                </div>
             </div>
         );
     }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import PetModel from '../models/pet'
+import '../css/editPet.css'
 
 const EditPet = (props) => {
 
@@ -37,11 +38,12 @@ const EditPet = (props) => {
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <label htmlFor="name">Name:</label>
+        <div className="ep-body">
+            <h1 className="ep-heading">Edit Pet</h1>
+            <form className="ep-form" onSubmit={handleSubmit}>
+                    <label className="ep-label" htmlFor="name">Name:</label>
                     <input
+                        className="ep-input"
                         onChange={(e) => { setName(e.target.value) }}
                         rows="5"
                         cols="40"
@@ -51,8 +53,9 @@ const EditPet = (props) => {
                         placeholder="(e.g. George)"
                         value={name}
                     /><br />
-                    <label htmlFor="birthdate">Birthdate:</label>
+                    <label className="ep-label" htmlFor="birthdate">Birthdate:</label>
                     <input
+                        className="ep-input"
                         onChange={(e) => { setBirthdate(e.target.value) }}
                         rows="5"
                         cols="40"
@@ -61,9 +64,10 @@ const EditPet = (props) => {
                         name="birthdate"
                         value={birthdate}
                     /><br />
+                <div className="ep-button-wrapper">
+                    <button className="ep-button" type="submit">✅</button>
+                    <form onSubmit={handleDelete}><button className="ep-button" type="submit">🗑️</button></form>
                 </div>
-                <button type="submit">Update Pet</button>
-                <form onSubmit={handleDelete}><button type="submit">Delete Pet</button></form>
             </form>
         </div>
     )

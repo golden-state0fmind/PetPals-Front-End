@@ -1,0 +1,28 @@
+.ec-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.ec-heading {
+  text-align: center;
+  font-family: 'Neucha', cursive;
+  margin: 2.5% 0% 2% 0%;
+}
+
+.ec-form {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  width: 80%
+}
+.ec-button-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.ec-button {
+  background-color: rgba(255, 255, 255, 0);
+  text-decoration: none;
+  border: none;
+  font-size: 1.5rem;
+}

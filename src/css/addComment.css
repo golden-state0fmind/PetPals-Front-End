@@ -1,0 +1,30 @@
+.ac-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.ac-heading {
+  text-align: center;
+  font-family: 'Neucha', cursive;
+  margin: 5% 0%;
+}
+
+.ac-form {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.ac-button {
+  background-color: #F23030;
+  text-decoration: none;
+  padding: 2.5% 1% 1% 1%;
+  border-radius: 15px;
+  border: none;
+  color: #FFF;
+  font-family: 'Neucha', cursive;
+  align-self: center;
+}
+
+
+

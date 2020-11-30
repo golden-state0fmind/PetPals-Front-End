@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import CommentModel from '../models/comment'
+import '../css/addComment.css'
 
 const AddComment = (props) => {
     const [content, setContent] = useState('')
@@ -18,9 +19,9 @@ const AddComment = (props) => {
     }
 
     return (
-        <div>
-            Add Comment
-            <form onSubmit={handleSubmit}>
+        <div className="ac-body">
+            <h1 className="ac-heading">Add Comment</h1>
+            <form className="ac-form" onSubmit={handleSubmit}>
                 <div className="form-group">
                     <textarea
                         onChange={(e) => { setContent(e.target.value) }}
@@ -32,7 +33,7 @@ const AddComment = (props) => {
                         value={content}
                     />
                 </div>
-                <button type="submit">Post Comment</button>
+                <button className="ac-button" type="submit">Post Comment</button>
             </form>
         </div>
     )

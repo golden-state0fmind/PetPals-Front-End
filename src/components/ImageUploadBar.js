@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import '../css/imageUploadBar.css'
 
 const ImageUploadBar = (props) => {
     const [uploadedImage, setuploadedImage] = useState()
@@ -18,11 +19,13 @@ const ImageUploadBar = (props) => {
     }
 
     return (
-        <div>
-            <input type="file" onChange={(event) => {
+        <div className="iub-container">
+            <div className="iub-wrapper">
+            <input className="iub-input" type="file" onChange={(event) => {
                 setuploadedImage(event.target.files[0], 'file')
             }} />
-            <button onClick={uploadImage} >upload</button>
+            <button className="iub-button" onClick={uploadImage} >click to upload</button>
+            </div>
         </div>
     )
 }

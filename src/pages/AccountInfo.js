@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import RelationshipModel from '../models/relationship'
-import {Link} from 'react-router-dom'
+import '../css/accountInfo.css'
 
 const AccountInfo = () => {
     const [userId] = useState(localStorage.getItem('id'))
@@ -21,12 +21,13 @@ const AccountInfo = () => {
     useEffect(() => { fetchUser() }, [])
 
     return (
-        <div>
-            <h1>Account Info</h1>
-            <p><span class="bold">Name:</span> {firstName} {lastName}</p>
-            <p><span class="bold">Birthday:</span> {birthdate}</p>
-            <p><span class="bold">Email:</span> {email}</p>
-            {/* <button><Link to={`/post/${userId}/edit`}>Edit Info</Link></button> */}
+        <div className="ai-body">
+            <div className="ai-content">
+                <h1 className="ai-heading">Account Info</h1>
+                <p className="ai-detail"><span className="bold">Name:</span> {firstName} {lastName}</p>
+                <p className="ai-detail"><span className="bold">Birthday:</span> {birthdate}</p>
+                <p className="ai-detail"><span className="bold">Email:</span> {email}</p>
+            </div>
         </div>
     )
 }

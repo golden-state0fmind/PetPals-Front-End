@@ -1,6 +1,74 @@
+.p-body {
+   display: flex;
+   flex-direction: column;
+   justify-content: center; 
+}
+
+/* PROFILE PIC AND NAME DISPLAY */
+.nameDisplay {
+    font-family: 'Righteous', cursive;
+    font-size: 1rem;
+    color: #F2762E;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
+}
+
+.profilePicContainer{
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.addProfilePic {
+    height: 175px;
+    width: 175px;
+    border: solid 5px;
+    border-color: #F2D338;
+    border-radius: 50%;
+    text-align:center;
+    display: flex;
+    align-items: center;
+    padding: 5%;
+}
+
+.addProfilePicText {
+    align-self: center;
+}
+
+.profilePic {
+    height: 35%;
+    width: 35%;
+    border: solid 5px;
+    border-color: #F2D338;
+    border-radius: 50%;
+}
+
+/* Image and Pet Containers */
+.row{
+    justify-content: center;
+}
+
+.content-link{
+    color: #25c7d9
+}
+
+.content-link:hover{
+    color: #f23030;
+    text-decoration: none;
+}
+
 .profile-preview-img{
-    width:100px;
-    height: 100px
+    width: 115px;
+    height: 115px;
+}
+;
+.img-wrapper{
+    display: flex;
+    justify-content: space-around;
+    margin: 0px;
+    padding: 0px;
 }
 
 .profile-preview-container{
@@ -8,13 +76,6 @@
     display: flex;
     flex-wrap: wrap;
 }
-
-.pet-card-img{
-    height: 100px;
-    width: 150px;
-
-}
-
 
 .pet-container{
     display: flex;
@@ -49,13 +110,12 @@
     align-items: start;
     margin: 50px 0 0 20px;
 }
-.pet-card-btns-container{
+/* .pet-card-btns-container{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     margin-right: 41px;
-  
-}
+} */
 
 .friends-container{
     border: 2px solid black;

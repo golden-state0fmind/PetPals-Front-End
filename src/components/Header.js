@@ -12,15 +12,15 @@ const Header = (props) => {
     <header className="navbar">
         <ul>
 
-          <li><Link to={'/'}>🏠</Link> </li>
-          <li><SearchBar /></li>
+          <li><Link to={'/'}><span className="home-emoji">🏠</span></Link> </li>
+          <li className="li-search"><SearchBar /></li>
 
         </ul>
 
         <ul>
           <div className="dropdown" >
             <div className="menu-button">
-              <div className="dropbtn"><img className=" dropdown-img" src="https://res.cloudinary.com/petpals/image/upload/v1606381699/oo53bublc5vmutnhsprr.png" alt="Temporary Profile Pic" /> </div>
+              <div className="dropbtn"><img className=" dropdown-img" src="https://res.cloudinary.com/petpals/image/upload/v1606603639/bgz6ubtlg5vm1yvkoe9t.png" alt="Temporary Profile Pic" /> </div>
             </div>
             <div className="dropdown-content">
                   <li><span className="petpals">PetPals</span></li>
@@ -35,7 +35,7 @@ const Header = (props) => {
                 </>
                 :
                 <>
-                  <li className="menu-li"><Link to={'/'}>Take a tour</Link></li>
+                  <li className="menu-li"><Link to={'/'}>Look Around</Link></li>
                   <li className="menu-li"><Link to={'/register'}>Register</Link></li>
                   <li className="menu-li"><Link to={'/login'}>Login</Link></li>
                 </>

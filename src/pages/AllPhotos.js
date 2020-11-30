@@ -1,58 +1,63 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { Container, Row, Col } from "react-bootstrap";
 import ImageModel from '../models/images'
-import '../css/allphotos.css'
+import RelationshipModel from '../models/relationship'
+import '../css/allPhotos.css'
 
 const AllPhotos = (props) => {
   const [images, setImages] = useState([])
-  const [currentUserId, setcurrentUserId] = useState(localStorage.getItem('id'))
+  const [userId] = useState(localStorage.getItem("id"));
+  const [userName, setUserName] = useState();
 
 
-  const fetchImages = () => {
-    ImageModel.all().then((imgData) => {
-      setImages(imgData.images)
+  const fetchUser = () => {
+    RelationshipModel.one(userId).then((user) => {
+      setImages(user.user.images)
+      setUserName(`${user.user.firstName} ${user.user.lastName}`);
     })
   }
+
 
   const handleProfilePic = (e, userId, imgUrl) => {
     e.preventDefault()
     ImageModel.updateProfilePic({
       imgUrl: imgUrl
     }, userId).then(data => {
-      props.history.push('/')
+      props.history.push('/profile')
     })
-}
+  }
 
-const handleDelete = (e, id) => {
-  e.preventDefault()
-  ImageModel.delete(id).then(data => {
-    props.history.push('/profile')
-  })
-}
+  const handleDelete = (e, id) => {
+    e.preventDefault()
+    ImageModel.delete(id).then(data => {
+      props.history.push('/profile')
+    })
+  }
 
-useEffect(() => { fetchImages() }, [])
+  useEffect(() => { fetchUser() }, [])
 
-const allImages = images.map((image, index) => (
-  <div key={index}>
-  {image.userId == currentUserId ?
-    <>
-      <img src={image.imgUrl} alt="User personal images" className='all-image' id={image.id} />
-      <form onSubmit={(e) => handleProfilePic(e, currentUserId, image.imgUrl)}> <button type="submit">Make Profile pic</button></form>
+  const altTag = `${userName} personal image`
+  const allImages = images.map((image, index) => (
+    <div className="aPhotos-card" key={index}>
+      <img src={image.imgUrl} alt={altTag} className="aPhotos-image" id={image.id} />
+      <div className="aPhotos-buttonbar">
+        <div><form onSubmit={(e) => handleProfilePic(e, userId, image.imgUrl)}><button type="submit" className="aPhotos-cbutton">👤</button></form></div>
+        <div><form onSubmit={(e) => handleDelete(e, image.id)}><button className="aPhotos-cbutton" type="submit">🗑️</button></form></div>
+      </div>
+    </div>
+  ))
 
-      <form onSubmit={(e) => handleDelete(e, image.id)}>
-        <button type="submit">Delete</button></form>
-    </>
-      : ""}
-  </div>
-))
+  return (
 
-return (
-  <div>
-    <h1>Your Photos</h1>
-    <Link to={'/uploadphotos'}><button>Upload Photos</button></Link>
-    {allImages}
-  </div>
-)
+    <div className="aPhotos-body">
+      <h1 className="aPhotos-heading">Your Photos</h1>
+      <button className="aPhotos-button"><Link className="aPhotos-link" to={'/uploadphotos'}>Upload Photos</Link></button>
+            <div className="aPhotos-container">
+              {allImages}
+            </div>
+    </div>
+  )
 }
 
 export default AllPhotos

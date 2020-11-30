@@ -1,0 +1,76 @@
+.font {
+  font-family: 'Neucha', cursive;
+  text-align: left;
+  padding: 0 0 0 5%;
+  color:#F2762E;
+}
+
+.ec-card{
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ec-content{
+  margin: 1;
+}
+
+.sp-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 800px;
+}
+
+.sp-post-body{
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sp-image-container{
+  align-self: center;
+  margin: 5% 0 0 0;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 80%;
+}
+
+.sp-image{
+  width: 100%;
+}
+
+.sp-content{
+  font-family: 'Neucha', cursive;
+  font-size: 18px;
+  margin: 5% 5% 0% 5%;
+}
+
+.sp-button{
+  background-color: rgba(255, 255, 255, 0);
+  border: 0;
+  margin: 1%;
+  align-self: center;
+  font-size: 2rem;
+}
+
+.sp-link:hover{
+  text-decoration: none;
+}
+
+.sp-button-wrapper {
+  text-align: center;
+}
+
+.ec-link-wrapper{
+  align-self: flex-end;
+  margin: 0 3%;
+}
+
+.ec-emoji{
+  font-size: 1.5rem;
+  align-self: flex-end;
+}

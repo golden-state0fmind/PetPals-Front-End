@@ -1,0 +1,32 @@
+.iub-container{
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  width: auto;
+}
+
+.iub-wrapper{
+  align-self: center;
+}
+
+.iub-input{
+  background-color: #25c7d941;
+  margin: 2% 0;
+  width:65%
+}
+
+.iub-button{
+  background-color: #F2D338;
+  text-decoration: none;
+  padding: 1.1% 1% .15% 1%;
+  border-radius: 0px 15px 15px 0px;
+  border: none;
+  color: black;
+  font-family: 'Neucha', cursive;
+  align-self: center;
+}
+
+.iub-button:hover {
+  background-color: #ffeb88;
+}

@@ -1,5 +1,6 @@
 header {
   background-color: #248EA6;
+  background-image: url(https://www.featurepics.com/StockImage/20160817/turquoise-bricks-stock-image-4192039.jpg);
   text-align: left;
   display: flex;
   justify-content: space-between;
@@ -30,16 +31,20 @@ header {
     text-decoration: none;
   }
 
+  .home-emoji {
+    font-size: 24px;
+  }
+
+  .li-search{
+    display: flex;
+    align-items: center;
+  }
+
 .petpals{
   font-family: 'Righteous', cursive;
   font-size: 1.75rem;
   color: #F2D338;
 }
-
-  // .dropbtn {
-  //   // background-color: #4CAF50;
-  //   border-radius: 50%;
-  // }
 
   .dropdown-img{
     border: 4px solid;

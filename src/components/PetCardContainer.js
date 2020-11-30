@@ -7,7 +7,7 @@ const PetCardContainer = (props) => {
     ))
     return (
         <div className="pet-container">
-            {pets.length>= 1 ? pets: <p>No pets added</p>}
+            {pets.length>= 1 ? pets: <><img src="https://media1.giphy.com/media/1yMfsRiblWJifHQ8Zq/200.gif" alt="Oh no! You have no pets yet."/><br/><span class="noPets-text">Uh Oh! You have no pets yet!</span></>}
         </div>
     );
 }
