@@ -22,24 +22,20 @@
   align-self: center;
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 50%;
 }
 
-/* .form-group{
+.form-group{
   align-self: center;
   display:  flex;
-  justify-content: space-around;
-} */
+  justify-content: center;
+}
 
 .ePost-label{
   font-family: 'Neucha', cursive;
   font-size: 20px;
   margin: 0 5px 0 0;
   color: #F2762E;
-}
-
-.ePost-input{
-  align-self: flex-end;
 }
 
 .ePost-button-wrapper{
