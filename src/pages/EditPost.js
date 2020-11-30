@@ -65,7 +65,6 @@ const EditPost = (props) => {
                         value={content}
                     />
                 </div>
-                <div className="ec-button-warpper"></div>
                 <button className="ePost-save-button" type="submit">Save Changes</button>
             </form>
             <div className="ec-delete-container">
