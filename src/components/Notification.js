@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import RelationshipModel from '../models/relationship'
 
 const Notification = (props) => {
-    // console.log(props.relationship)
     const [userId] = useState(parseInt(localStorage.getItem('id')))
 
     const handleSubmit = (e) => {

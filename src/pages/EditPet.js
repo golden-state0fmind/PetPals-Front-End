@@ -11,7 +11,6 @@ const EditPet = (props) => {
 
     const fetchPet = () => {
         PetModel.one(props.match.params.id).then((petData) => {
-            console.log(petData.pet)
             setName(petData.pet.name)
             setBirthdate(petData.pet.birthdate)
         })

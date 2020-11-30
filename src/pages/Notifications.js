@@ -11,7 +11,6 @@ const Notifications = (props) => {
 
     const fethData = () => {
         RelationshipModel.pending(userId).then(requests => {
-            // console.log(requests)
             // Filtering out current user
             for (let i = 0; i < requests.relationships.length; i++) {
                 if (requests.relationships[i].userOne.id !== parseInt(userId)) {
@@ -25,9 +24,6 @@ const Notifications = (props) => {
             }
         })
     }
-
-
-    console.log(relationship)
 
     const request = relationship.map((relationship, index) => (
         <Notification key={index} relationship={relationship} />

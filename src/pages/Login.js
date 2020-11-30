@@ -16,8 +16,6 @@ class Login extends Component {
         event.preventDefault()
         UserModel.login(this.state)
             .then(data => {
-                console.log(data)
-                // TODO: FIX IT
                 if (!data.user) {
                     return false
                 }
