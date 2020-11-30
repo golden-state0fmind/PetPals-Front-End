@@ -16,8 +16,6 @@ const AllPets = (props) => {
 
     useEffect(() => { fetchUserPets() }, [])
 
-
-    console.log(pets)
     return (
         <div className="allp-body">
             <h1 className="allp-heading">My Pets</h1>

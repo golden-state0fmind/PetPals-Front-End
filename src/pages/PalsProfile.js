@@ -22,14 +22,9 @@ const PalsProfile = (props) => {
   const [posts, setPosts] = useState([]);
   const [profilePic, setProfilePic] = useState("")
 
-  console.log(currentUserId)
-
-
   const fetchUsers = () => {
-    console.log("hello")
     RelationshipModel.one(palsId).then(user => {
       setPosts(user.user.posts);
-      console.log(user)
       setFirstName(user.user.firstName)
       setLastName(user.user.lastName)
       setProfilePic(user.user.imgUrl)
@@ -79,7 +74,6 @@ const PalsProfile = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log('Add a friend')
     let userOne;
     let userTwo;
     if (currentUserId < palsId) {
@@ -89,8 +83,6 @@ const PalsProfile = (props) => {
       userOne = palsId
       userTwo = currentUserId
     }
-    console.log('userOne', userOne)
-    console.log('userOTwo', userTwo)
 
     RelationshipModel.create({
       userOneId: userOne,

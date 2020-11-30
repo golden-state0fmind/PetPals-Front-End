@@ -13,7 +13,6 @@ const SearchResults = (props) => {
             setUsers(foundUsers.user)
         })
     }
-    console.log(users)
 
     useEffect(()=>{fetchUsers()},[])
 
