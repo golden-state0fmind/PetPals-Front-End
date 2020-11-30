@@ -78,9 +78,16 @@ div.profile-preview-container{
     align-self: center;
 }
 
+.content-container-heading{
+    width: 230px;
+    align-self: center;
+}
+
 .content-text{
     font-family: 'Neucha', cursive;
     color: #F2762E;
+    font-size: 30px;
+    margin: 0;
 }
 
 .content-link-container{

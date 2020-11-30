@@ -6,9 +6,9 @@ const Result = (props) => {
     return (
         <div>
         {userId !== props.user.id ?
-        <>👤 <Link className="result-link" to={`/user/${props.user.id}/profile`}><h3> {props.user.firstName} {props.user.lastName}</h3></Link></> :
+        <><span className="r-emoji">👤</span><Link className="result-link" to={`/user/${props.user.id}/profile`}><h3> {props.user.firstName} {props.user.lastName}</h3></Link></> :
 
-        <>👤 <Link className="result-link" to={`/profile`}><h3> {props.user.firstName} {props.user.lastName}</h3></Link></>
+        <><span className="r-emoji">👤 </span><Link className="result-link" to={`/profile`}><h3> {props.user.firstName} {props.user.lastName}</h3></Link></>
         }
       </div>
     )

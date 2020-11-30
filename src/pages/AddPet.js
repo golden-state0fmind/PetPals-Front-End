@@ -39,7 +39,7 @@ const AddPet = (props) => {
                         name="name"
                         placeholder="(e.g. George)"
                         value={name}
-                    /><br />
+                    />
                     <label className="ap-label" htmlFor="species">Species: </label>
                     <input
                         className="ap-input"
@@ -51,7 +51,7 @@ const AddPet = (props) => {
                         name="species"
                         placeholder="(e.g. Bat)"
                         value={species}
-                    /><br />
+                    />
                     <label className="ap-label" htmlFor="birthdate">Birthdate: </label>
                     <input
                         className="ap-input"
@@ -62,7 +62,7 @@ const AddPet = (props) => {
                         id="birthdate"
                         name="birthdate"
                         value={birthdate}
-                    /><br />
+                    />
                 </div>
                 <p className="ap-label">Upload an Image:</p>
                 <ImageUploadBar setImgUrl={setImgUrl} />

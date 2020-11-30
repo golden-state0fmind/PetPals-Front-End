@@ -1,31 +1,34 @@
-.ac-body {
+.n-body {
   display: flex;
   flex-direction: column;
-}
-
-.ac-heading {
+  justify-content: center;
   text-align: center;
+}
+
+.n-heading{
   font-family: 'Neucha', cursive;
-  margin: 5% 0%;
+  color: #f2762e;
+  margin: 2%;
 }
 
-.ac-form {
+.n-results{
   align-self: center;
-  display: flex;
-  flex-direction: column;
+  text-align: center;
 }
 
-.ac-button {
+.n-emoji{
+  font-size: 3rem;
+}
+
+.n-button {
   background-color: #F23030;
   text-decoration: none;
   padding: 4px 0 0 0;
-  width: 100px;
+  width: 155px;
   border-radius: 15px;
   border: none;
   color: #FFF;
   font-family: 'Neucha', cursive;
   align-self: center;
 }
-
-
 

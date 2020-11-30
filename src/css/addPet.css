@@ -13,24 +13,26 @@
   align-self: center;
   display: flex;
   flex-direction: column;
-  width: 80%
+  width: 50%;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+
 }
 
 .ap-label{
   font-family: 'Neucha', cursive;
   font-size: 20px;
-  margin: 2% 2% 2% 0;
   color: #F2762E;
-}
-
-.ap-input{
-  align-self: flex-end;
 }
 
 .ap-button {
   background-color: #F23030;
   text-decoration: none;
-  padding: 2.5% 1% 1% 1%;
+  padding: 4px 0 0 0;
+  width: 75px;
   border-radius: 15px;
   border: none;
   color: #FFF;
