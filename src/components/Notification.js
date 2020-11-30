@@ -17,10 +17,11 @@ const Notification = (props) => {
     }
 
     return (
-        <div>
+        <div className="n-results">
+        <span className="n-emoji">👤</span>
         {props.relationship.userOne.id !== userId ? <h3>{props.relationship.userOne.firstName}  {props.relationship.userOne.lastName}</h3> : ""}
         {props.relationship.userTwo.id !== userId ? <h3>{props.relationship.userTwo.firstName}  {props.relationship.userTwo.lastName}</h3> : ""}
-            <button onClick={handleSubmit}>Accept friend request</button>
+            <button className="n-button" onClick={handleSubmit}>Accept friend request</button>
         </div>
     );
 }
