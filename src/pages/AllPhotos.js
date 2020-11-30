@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Container, Row, Col } from "react-bootstrap";
 import ImageModel from '../models/images'
 import RelationshipModel from '../models/relationship'
-import '../css/allPhotos.css'
+import '../css/allphotos.css'
 
 const AllPhotos = (props) => {
   const [images, setImages] = useState([])
