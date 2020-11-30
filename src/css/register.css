@@ -39,7 +39,8 @@
 .r-button {
   background-color: #F23030;
   text-decoration: none;
-  padding: 1.5% 2% .5% 2%;
+  padding: 4px 0 0 0;
+  width: 100px;
   border-radius: 15px;
   border: none;
   color: #FFF;

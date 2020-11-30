@@ -11,7 +11,6 @@ const Friends = () => {
             setFriends(friends.friendsList)
         })
     }
-    // console.log(friends)
     useEffect(() =>{fetchUser()},[])
 
     const friendsList = friends.map((friend, index) =>(

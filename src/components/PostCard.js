@@ -4,7 +4,7 @@ import '../css/postCard.css'
 
 
 const PostCard = (props) => {
-    const altTag = `${props.user}'s post photo.` //this might not work on the home page, check your props
+    const altTag = `${props.user}'s post photo.` 
     const userId = parseInt(localStorage.getItem('id'))
     const posts = props.posts.map((post, index) => (
         <div key={index} className="post-container">
