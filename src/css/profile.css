@@ -46,6 +46,9 @@
 }
 
 /* Image and Pet Containers */
+.row{
+    justify-content: center;
+}
 
 .profile-preview-img{
     width: 115px;
