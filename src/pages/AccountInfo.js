@@ -27,7 +27,6 @@ const AccountInfo = () => {
                 <p className="ai-detail"><span className="bold">Name:</span> {firstName} {lastName}</p>
                 <p className="ai-detail"><span className="bold">Birthday:</span> {birthdate}</p>
                 <p className="ai-detail"><span className="bold">Email:</span> {email}</p>
-                {/* <button><Link to={`/post/${userId}/edit`}>Edit Info</Link></button> */}
             </div>
         </div>
     )
