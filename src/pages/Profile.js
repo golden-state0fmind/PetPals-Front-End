@@ -90,7 +90,7 @@ const Profile = () => {
       <Container fluid>
         <Row className="img-wrapper">
           <Col sm={4} className="img-container">
-            <h4 className="content-text">Photos</h4>
+            <div className="content-container-heading"><h4 className="content-text">Photos</h4></div>
             <Images imgClass="profile-preview-img" divClass="profile-preview-container" images={images} userInfo={userName} type={"Image"} />
             <div className="content-link-container">
               <Link className="content-link" to="/allphotos">Open Photo Album</Link><br />
@@ -99,7 +99,7 @@ const Profile = () => {
           </Col>
 
           <Col sm={4} className="img-container">
-            <h4 className="content-text">Pets</h4>
+            <div className="content-container-heading"><h4 className="content-text">Pets</h4></div>
             <Images imgClass="profile-preview-img" divClass="profile-preview-container" images={pets} userInfo={userName} type={"Pet"} />
             <div className="content-link-container">
               <Link className="content-link" to="/allpets">See All Pets</Link><br />
