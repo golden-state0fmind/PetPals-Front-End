@@ -9,16 +9,20 @@
   margin: 5% 0%;
 }
 
-.form-group{
-  align-self: center;
+.ePost-form{
+  display:flex;
+}
+
+.form-wrapper{
   display:  flex;
   justify-content: center;
 }
 
-.l-form {
+form.l-form {
   align-self: center;
   display: flex;
   flex-direction: column;
+  width: 33%;
 }
 
 label.l-label{
@@ -28,14 +32,15 @@ label.l-label{
   margin: 0 2% 0 0;
 }
 
-.l-input{
+/* .l-input{
   align-self: flex-end;
-}
+} */
 
 .l-button {
   background-color: #F23030;
   text-decoration: none;
-  padding: .5% 2% .5% 2%;
+  padding: 4px 0 0 0;
+  width: 65px;
   border-radius: 15px;
   border: none;
   color: #FFF;
