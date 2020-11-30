@@ -31,7 +31,8 @@
 .ap-button {
   background-color: #F23030;
   text-decoration: none;
-  padding: 2.5% 1% 1% 1%;
+  padding: 4px 0 0 0;
+  width: 75px;
   border-radius: 15px;
   border: none;
   color: #FFF;
