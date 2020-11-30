@@ -132,7 +132,7 @@ const PalsProfile = (props) => {
               <Friends />
             </Col>
           </Row> */}
-
+          <div className="post-header"><h4 className="content-text">Posts</h4></div>
         {posts.length ? (
           <PostContainer user={userName} posts={posts} />
         ) : (
