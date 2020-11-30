@@ -13,13 +13,14 @@
   align-self: center;
   display: flex;
   flex-direction: column;
-  width: 80%
+  width: 55%
 }
 
 .cp-button {
   background-color: #F23030;
   text-decoration: none;
-  padding: 1% 2% 0% 2%;
+  padding: 4px 0 0 0;
+  width: 75px;
   border-radius: 15px;
   border: none;
   color: #FFF;
