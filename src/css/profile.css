@@ -127,7 +127,17 @@ div.profile-preview-container{
     flex-direction: column;
     justify-content: space-around;
     margin: 50px 0 0 20px;
+}
 
+.posts-wrapper{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.post-header{
+    padding: 1% 0 0 0;
+    text-align: center;
 }
 
 .friends-list-profile{
@@ -135,13 +145,6 @@ div.profile-preview-container{
     justify-content: space-evenly;
 }
 
-
-/* .pet-card-btns-container{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-right: 41px;
-} */
 
 .friends-container{
     border: 2px solid black;
