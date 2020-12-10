@@ -7,7 +7,7 @@ const AddPet = (props) => {
     const [name, setName] = useState('')
     const [species, setSpecies] = useState('')
     const [birthdate, setBirthdate] = useState('')
-    const [userId, setUser] = useState(localStorage.getItem('id'))
+    const [userId] = useState(localStorage.getItem('id'))
     const [imgUrl, setImgUrl] = useState('')
 
     const handleSubmit = (e) => {

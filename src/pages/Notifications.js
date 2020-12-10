@@ -6,7 +6,7 @@ import '../css/notifications.css'
 const Notifications = (props) => {
 
     const [userId] = useState(localStorage.getItem('id'))
-    const [users, setUsers] = useState([])
+    // const [users, setUsers] = useState([])
     const [relationship, setRelationship] = useState([])
 
     const fethData = () => {
@@ -33,7 +33,7 @@ const Notifications = (props) => {
     useEffect(() => { fethData() }, [])
     return (
         <div className="n-body">
-        <h1 className="n-heading">Notifications</h1>
+            <h1 className="n-heading">Notifications</h1>
             {request}
         </div>
     );

@@ -40,7 +40,7 @@ const EditPost = (props) => {
     return (
         <div className="ePost-body">
             <h1 className="ePost-heading">Edit Post</h1>
-            {imgUrl !== "" ? <img className="ec-image" src={imgUrl} alt="This is your post image" /> : ""}
+            {imgUrl !== "" ? <img className="ec-image" src={imgUrl} alt="This is your post" /> : ""}
             <form className="ePost-form" onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label className="ePost-label">Image URL:</label>
@@ -68,7 +68,7 @@ const EditPost = (props) => {
                 <button className="ePost-save-button" type="submit">Save Changes</button>
             </form>
             <div className="ec-delete-container">
-            <form onSubmit={handleDelete}><button className="ePost-delete-button" type="submit">Delete Post</button></form>
+                <form onSubmit={handleDelete}><button className="ePost-delete-button" type="submit">Delete Post</button></form>
             </div>
         </div>
     )

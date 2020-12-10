@@ -4,7 +4,7 @@ import RelationshipModel from "../models/relationship";
 import PetCardContainer from '../components/PetCardContainer'
 import '../css/allPets.css'
 
-const AllPets = (props) => {
+const AllPets = () => {
     const [pets, setPets] = useState([])
     const [userId] = useState(localStorage.getItem('id'))
 

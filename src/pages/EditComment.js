@@ -4,7 +4,7 @@ import '../css/editComment.css'
 
 
 const EditComment = (props) => {
-    const [userId] = useState(localStorage.getItem('id'))
+    // const [userId] = useState(localStorage.getItem('id'))
     const [commentId] = useState(props.match.params.id)
     const [content, setContent] = useState('')
 

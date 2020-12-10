@@ -5,11 +5,11 @@ import PostBar from "../components/PostBar";
 import PostContainer from "../components/PostContainer";
 import "../css/profile.css";
 import RelationshipModel from "../models/relationship";
-import ImageModel from "../models/images";
-import PetCardContainer from "../components/PetCardContainer";
+// import ImageModel from "../models/images";
+// import PetCardContainer from "../components/PetCardContainer";
 import { Container, Row, Col } from "react-bootstrap";
 // import PostContainer from "../components/PostContainer";
-import Friends from "../components/Friends";
+// import Friends from "../components/Friends";
 
 const Profile = () => {
   const [userId] = useState(localStorage.getItem("id"));
@@ -82,7 +82,7 @@ const Profile = () => {
       <div className="nameDisplay"><h1>{firstName} {lastName}</h1></div>
       <div className="profilePicContainer">
         {profilePic !== null ?
-          <img className="profilePic" src={profilePic} alt="Profile Picture" />
+          <img className="profilePic" src={profilePic} alt="profile" />
           : <><div className="addProfilePic"><Link className="addProfilePicText" to="/allphotos">Add a Profile Pic from your Photos</Link></div></>}
       </div>
       <PostBar />

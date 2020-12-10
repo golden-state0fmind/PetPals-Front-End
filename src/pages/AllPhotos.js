@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Container, Row, Col } from "react-bootstrap";
 import ImageModel from '../models/images'
 import RelationshipModel from '../models/relationship'
 import '../css/allphotos.css'
@@ -53,9 +52,9 @@ const AllPhotos = (props) => {
     <div className="aPhotos-body">
       <h1 className="aPhotos-heading">Your Photos</h1>
       <button className="aPhotos-button"><Link className="aPhotos-link" to={'/uploadphotos'}>Upload Photos</Link></button>
-            <div className="aPhotos-container">
-              {allImages}
-            </div>
+      <div className="aPhotos-container">
+        {allImages}
+      </div>
     </div>
   )
 }

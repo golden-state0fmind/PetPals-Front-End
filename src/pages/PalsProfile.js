@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import RelationshipModel from '../models/relationship'
 import Images from '../components/Images'
-import PetCardContainer from "../components/PetCardContainer";
+// import PetCardContainer from "../components/PetCardContainer";
 import PostBar from "../components/PostBar";
 import PostContainer from "../components/PostContainer";
 import ImageModel from "../models/images";
@@ -15,7 +15,7 @@ const PalsProfile = (props) => {
   const [images, setImages] = useState([])
   const [firstName, setFirstName] = useState()
   const [lastName, setLastName] = useState()
-  const [userName, setUserName] = useState()
+  const [userName] = useState()
   const [currentUserId] = (localStorage.getItem('id'))
   const [palsId] = useState(props.match.params.id)
   const [pets, setPets] = useState([])
@@ -63,13 +63,13 @@ const PalsProfile = (props) => {
     })
   }
 
-  // const fetchImages = () => {
-  //   ImageModel.limit().then((imgData) => {
-  //     setImages(imgData.images)
-  //   })
-  // }
+  const fetchImages = () => {
+    ImageModel.limit().then((imgData) => {
+      setImages(imgData.images)
+    })
+  }
 
-  // useEffect(() => { fetchImages() }, [])
+  useEffect(() => { fetchImages() }, [])
 
 
   const handleSubmit = (e) => {
@@ -128,10 +128,10 @@ const PalsProfile = (props) => {
         </Row>
 
         {/* <Row>
-            <Col className="friends-container">
-              <Friends />
-            </Col>
-          </Row> */}
+          <Col className="friends-container">
+            <Friends />
+          </Col>
+        </Row> */}
 
         {posts.length ? (
           <PostContainer user={userName} posts={posts} />
