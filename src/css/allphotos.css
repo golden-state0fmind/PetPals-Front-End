@@ -1,0 +1,79 @@
+.aPhotos-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.aPhotos-heading {
+    text-align: center;
+    font-family: 'Neucha', cursive;
+    margin: 2.5% 0%;
+}
+
+.aPhotos-form {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    width: 80%
+}
+
+.aPhotos-button {
+    text-decoration: none;
+    padding: .5% 1% 0% 1%;
+    border-radius: 15px;
+    border: 1px solid black;
+    color: black;
+    font-family: 'Neucha', cursive;
+    align-self: center;
+    background-color: #f2762e82;
+    margin: 0% 0% 2% 0%;
+}
+
+.aPhotos-button:hover {
+    background-color: #f230305f;
+}
+
+a.aPhotos-link{
+    text-decoration: none;
+    color: black;
+}
+
+a.aPhotos-link:hover {
+    color:white;
+}
+/* Photos Container */
+.aPhotos-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    align-self: center;
+}
+
+
+
+/* Photos Cards */
+.aPhotos-card{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 86%;
+    margin: 5% 2.5% 5% 2.5%;
+    align-self: center;
+}
+
+.aPhotos-image{
+    width: 100%;
+    height: 100%;
+}
+
+.aPhotos-buttonbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f2d33883;
+    border: 1px solid black;
+    border-radius: 0px 0px 5px 5px;
+    padding: 3%;
+}
+
+.aPhotos-cbutton{
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}

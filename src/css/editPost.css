@@ -1,0 +1,77 @@
+.ePost-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.ePost-heading {
+  text-align: center;
+  font-family: 'Neucha', cursive;
+  margin: 2.5% 0% 2% 0%;
+}
+
+.ec-image{
+  width:65%;
+  max-width: 800px;
+  border: 1px solid black;
+  border-radius: 5px;
+  align-self: center;
+  margin: 2%;
+}
+
+.ePost-form {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.form-group{
+  align-self: center;
+  display:  flex;
+  justify-content: center;
+}
+
+.ePost-label{
+  font-family: 'Neucha', cursive;
+  font-size: 20px;
+  margin: 0 5px 0 0;
+  color: #F2762E;
+}
+
+.ePost-button-wrapper{
+  display: flex;
+  justify-content: center;
+  margin: 5%;
+}
+
+.ePost-save-button {
+  background-color: #F23030;
+  text-decoration: none;
+  padding: 4px 0 0 0;
+  margin: 1%;
+  width: 125px;
+  border-radius: 15px;
+  border: none;
+  color: #FFF;
+  font-family: 'Neucha', cursive;
+  align-self: center;
+}
+
+.ePost-delete-button {
+  background-color: #F23030;
+  text-decoration: none;
+  padding: 4px 0 0 0;
+  margin: 1%;
+  width: 125px;
+  border-radius: 15px;
+  border: none;
+  color: #FFF;
+  font-family: 'Neucha', cursive;
+  align-self: center;
+}
+
+.ec-delete-container{
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+}

@@ -1,0 +1,50 @@
+.l-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.l-heading {
+  text-align: center;
+  font-family: 'Neucha', cursive;
+  margin: 5% 0%;
+}
+
+.ePost-form{
+  display:flex;
+}
+
+.form-wrapper{
+  display:  flex;
+  justify-content: center;
+}
+
+form.l-form {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+
+label.l-label{
+  font-family: 'Neucha', cursive;
+  font-size: 20px;
+  color: #F2762E;
+  margin: 0 2% 0 0;
+}
+
+/* .l-input{
+  align-self: flex-end;
+} */
+
+.l-button {
+  background-color: #F23030;
+  text-decoration: none;
+  padding: 4px 0 0 0;
+  width: 65px;
+  border-radius: 15px;
+  border: none;
+  color: #FFF;
+  font-family: 'Neucha', cursive;
+  align-self: center;
+}
+

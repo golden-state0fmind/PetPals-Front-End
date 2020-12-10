@@ -1,0 +1,50 @@
+.r-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.r-heading {
+  text-align: center;
+  font-family: 'Neucha', cursive;
+  margin: 5% 0%;
+}
+
+.form-group{
+  align-self: center;
+  display:  flex;
+  justify-content: space-around;
+  width: 100%
+}
+
+.r-form {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.r-label{
+  font-family: 'Neucha', cursive;
+  font-size: 20px;
+  margin: 2% 2% 2% 0;
+  color: #F2762E;
+
+}
+
+.r-input{
+  align-self: flex-end;
+
+}
+
+.r-button {
+  background-color: #F23030;
+  text-decoration: none;
+  padding: 4px 0 0 0;
+  width: 100px;
+  border-radius: 15px;
+  border: none;
+  color: #FFF;
+  font-family: 'Neucha', cursive;
+  align-self: center;
+}
+

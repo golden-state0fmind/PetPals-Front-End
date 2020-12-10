@@ -1,0 +1,38 @@
+.h-heading {
+    text-align: center;
+    font-family: 'Neucha', cursive;
+    margin: 2.5% 0% 0% 0%;
+}
+
+.h-post-heading {
+    text-align: center;
+    font-family: 'Neucha', cursive;
+    margin: 0%;
+    font-size: 2rem;
+    color:#F2762E;
+}
+
+div.img-container-col{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+div.col{
+    margin: 0;
+    padding: 0;
+}
+
+.home-preview-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 0 2% 0;
+    max-width: 600px;
+    align-self: center;
+}
+
+.home-preview-img{
+    height: 100px;
+    width: 100px;
+}

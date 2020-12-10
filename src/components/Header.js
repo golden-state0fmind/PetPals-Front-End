@@ -1,32 +1,49 @@
 import React from 'react';
 import './Header.scss'
 import { Link } from 'react-router-dom'
+import SearchBar from './SearchBar'
+
+import { Nav, Button, Form, FormControl, Navbar, NavDropdown } from 'react-bootstrap'
+
+
+
 const Header = (props) => {
   return (
-    <header>
-      <div className="logo">
-        <Link to={'/'}>Pet Pals Home</Link>
-      </div>
-      <div className="links">
+    <header className="navbar">
         <ul>
 
-          {props.currentUser ?
-            <>
-              <li><Link to={'/profile'}>Profile</Link></li>
-              {/* these links need to built out */}
-              <li><Link to={'/allpets'}>All Pets</Link></li>
-              <li><Link to={'/accountinfo'}>Account info</Link></li>
-              <li><a href="/logout" onClick={props.logout}>Log Out</a></li>
-            </>
-            :
-            <>
-              <li><Link to={'/'}>Take a tour</Link></li>
-              <li><Link to={'/register'}>Register</Link></li>
-              <li><Link to={'/login'}>Login</Link></li>
-            </>
-          }
+          <li><Link to={'/'}><span className="home-emoji">🏠</span></Link> </li>
+          <li className="li-search"><SearchBar /></li>
+
         </ul>
-      </div>
+
+        <ul>
+          <div className="dropdown" >
+            <div className="menu-button">
+              <div className="dropbtn"><img className=" dropdown-img" src="https://res.cloudinary.com/petpals/image/upload/v1606603639/bgz6ubtlg5vm1yvkoe9t.png" alt="Temporary Profile Pic" /> </div>
+            </div>
+            <div className="dropdown-content">
+                  <li><span className="petpals">PetPals</span></li>
+              {props.currentUser ?
+                <>
+                  <li className="menu-li"><Link to={'/profile'}>Profile</Link></li>
+                  <li className="menu-li"><Link to={'/notifications'}>Notifications</Link></li>
+                  <li className="menu-li"><Link to={'/allpets'}>My Pets</Link></li>
+                  <li className="menu-li"><Link to={'/allphotos'}>Photos</Link></li>
+                  <li className="menu-li"><Link to={'/accountinfo'}>Account</Link></li>
+                  <li className="menu-li"><a href="/logout" onClick={props.logout}>Log Out</a></li>
+                </>
+                :
+                <>
+                  <li className="menu-li"><Link to={'/'}>Look Around</Link></li>
+                  <li className="menu-li"><Link to={'/register'}>Register</Link></li>
+                  <li className="menu-li"><Link to={'/login'}>Login</Link></li>
+                </>
+              }
+            </div>
+
+          </div>
+        </ul>
     </header>
   );
 }

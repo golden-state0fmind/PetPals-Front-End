@@ -3,14 +3,17 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Routes from './config/routes'
 import './App.css'
+import './css/profile.css'
 import UserModel from './models/user'
 
 function App() {
 
   const [currentUser, setCurrentUser] = useState(localStorage.getItem('id'))
-  const storeUser = (userId) => {
-    setCurrentUser({ userId })
-    localStorage.setItem('id', userId)
+  const storeUser = (user) => {
+    setCurrentUser({ user })
+    localStorage.setItem('id', user.id)
+    localStorage.setItem('firstName', user.firstName)
+    localStorage.setItem('lastName', user.lastName)
   }
   const logout = (event) => {
     event.preventDefault()

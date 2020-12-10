@@ -1,0 +1,175 @@
+.p-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+/* PROFILE PIC AND NAME DISPLAY */
+.nameDisplay {
+    font-family: 'Righteous', cursive;
+    font-size: 1rem;
+    color: #F2762E;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
+}
+
+.profilePicContainer{
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.addProfilePic {
+    height: 175px;
+    width: 175px;
+    border: solid 5px;
+    border-color: #F2D338;
+    border-radius: 50%;
+    text-align:center;
+    display: flex;
+    align-items: center;
+    padding: 5%;
+}
+
+.addProfilePicText {
+    align-self: center;
+}
+
+.profilePic {
+    height: 35%;
+    width: 35%;
+    border: solid 5px;
+    border-color: #F2D338;
+    border-radius: 50%;
+}
+
+/* Image and Pet Containers */
+.row{
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+div.img-container.col-sm-4{
+    display: flex;
+    justify-content: space-around;
+    margin: 0px;
+    padding: 0px; 
+}
+
+.img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+div.img-wrapper.row{
+    display: flex;
+    justify-content: space-around;
+    margin: 0px;
+    padding: 0px;
+}
+
+div.profile-preview-container{
+    width: 230px;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+}
+
+.content-container-heading{
+    width: 230px;
+    align-self: center;
+}
+
+.content-text{
+    font-family: 'Neucha', cursive;
+    color: #F2762E;
+    font-size: 30px;
+    margin: 0;
+}
+
+.content-link-container{
+    width: 230px;
+    align-self: center;
+}
+
+.content-link{
+    color: #25c7d9
+}
+
+.content-link:hover{
+    color: #f23030;
+    text-decoration: none;
+}
+
+.profile-preview-img{
+    width: 115px;
+    height: 115px;
+}
+
+.pet-container{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: start;
+    justify-content: space-around;
+}
+
+.pet-card-container{
+    display: flex;
+}
+
+.profile-header{
+    width: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 50px 0 0 20px;
+}
+
+.posts-wrapper{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.post-header{
+    padding: 1% 0 0 0;
+    text-align: center;
+}
+
+.friends-list-profile{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.friends-container{
+    border: 2px solid black;
+    margin: 100px 0;
+}
+
+.addFriend-button{
+    background-color: #F23030;
+    text-decoration: none;
+    padding: 4px 0 0 0;
+    margin: 1%;
+    width: 125px;
+    border-radius: 15px;
+    border: none;
+    color: #FFF;
+    font-family: 'Neucha', cursive;
+    align-self: center;
+}
+
+.addFriend-container{
+    display: flex;
+    justify-content: center;
+}
+
+.addFriend-button:hover{
+    background-color: #f23030ad;
+    align-self: center;
+}
