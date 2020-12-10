@@ -31,5 +31,5 @@ jobs:
       with:
         app-name: 'petpals'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_bd773973052a44cd87b8f44a38665daf }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_cf940f47917b433b94f3a22e3b77aab6 }}
         package: .
