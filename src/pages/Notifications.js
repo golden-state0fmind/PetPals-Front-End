@@ -30,7 +30,7 @@ const Notifications = (props) => {
     ))
 
 
-    useEffect(() => { fethData() }, [])
+    // useEffect(() => { fethData() }, [])
     return (
         <div className="n-body">
             <h1 className="n-heading">Notifications</h1>
